@@ -8,4 +8,4 @@ Console.WriteLine("2019   10400  20800  31200");
 Console.WriteLine("2020   10816   21632  32448");
 Console.WriteLine("What is your Name");
     string Name = Console.ReadLine();
-Console.WriteLine("The Projected Raise{0:f}percent Yearly,RAISERATE");
+Console.WriteLine($"The Projected Raise{RAISERATE}percent 0Yearly,RAISERATE");

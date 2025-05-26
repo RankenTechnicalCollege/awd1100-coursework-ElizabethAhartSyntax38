@@ -174,7 +174,6 @@
         private Label label1;
         private Label labelDisplay;
         private Label label2;
-    }
     
-}
+
 
