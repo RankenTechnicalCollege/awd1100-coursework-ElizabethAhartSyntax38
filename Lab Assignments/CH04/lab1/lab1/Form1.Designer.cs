@@ -37,6 +37,7 @@
             UserInput2 = new TextBox();
             LblDisplay = new Label();
             label1 = new Label();
+            labelDisplay = new Label();
             SuspendLayout();
             // 
             // btnSubmit1
@@ -119,11 +120,20 @@
             label1.TabIndex = 8;
             label1.Text = "Enter Miles";
             // 
+            // labelDisplay
+            // 
+            labelDisplay.AutoSize = true;
+            labelDisplay.Location = new Point(72, 303);
+            labelDisplay.Name = "labelDisplay";
+            labelDisplay.Size = new Size(0, 20);
+            labelDisplay.TabIndex = 9;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(labelDisplay);
             Controls.Add(label1);
             Controls.Add(LblDisplay);
             Controls.Add(UserInput2);
@@ -151,6 +161,8 @@
         private TextBox UserInput2;
         private Label LblDisplay;
         private Label label1;
+        private Label labelDisplay;
     }
+    
 }
 

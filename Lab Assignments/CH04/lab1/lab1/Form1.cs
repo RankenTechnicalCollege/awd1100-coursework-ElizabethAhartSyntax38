@@ -17,7 +17,11 @@ namespace lab1
         private void userInput1_TextChanged(object sender, EventArgs e)
         {
             string mile = Console.ReadLine();
-
+            String Kilometer=Console.ReadLine();
+          double userInput1= Convert.ToDouble(mile);
+            double multiplied = userInput1, userinput2;
+            double userInput2= Convert.ToDouble(Kilometer);
+           
         }
 
         private void UserInput2_TextChanged(object sender, EventArgs e)
@@ -27,8 +31,8 @@ namespace lab1
 
         private void btnSubmit1_Click(object sender, EventArgs e)
         {
-
-        }
+            string lblDisplay = string.Format("{0} *{1}={2}");
+}
 
         private void btnSubmit2_Click(object sender, EventArgs e)
         {
