@@ -32,11 +32,12 @@ namespace lab1
         private void btnSubmit1_Click(object sender, EventArgs e)
         {
             string lblDisplay = string.Format("{0} *{1}={2}");
+           
 }
 
         private void btnSubmit2_Click(object sender, EventArgs e)
         {
-
+            string lbldisplay = string.Format("{2}*{1}={0}");
         }
 
         private void Form1_Load(object sender, EventArgs e)

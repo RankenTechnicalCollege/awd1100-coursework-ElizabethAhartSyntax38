@@ -38,6 +38,7 @@
             LblDisplay = new Label();
             label1 = new Label();
             labelDisplay = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // btnSubmit1
@@ -128,11 +129,21 @@
             labelDisplay.Size = new Size(0, 20);
             labelDisplay.TabIndex = 9;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(56, 342);
+            label2.Name = "label2";
+            label2.Size = new Size(50, 20);
+            label2.TabIndex = 10;
+            label2.Text = "label2";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
             Controls.Add(labelDisplay);
             Controls.Add(label1);
             Controls.Add(LblDisplay);
@@ -162,6 +173,7 @@
         private Label LblDisplay;
         private Label label1;
         private Label labelDisplay;
+        private Label label2;
     }
     
 }
