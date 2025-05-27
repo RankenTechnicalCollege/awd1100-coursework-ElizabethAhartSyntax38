@@ -35,6 +35,11 @@
             label1 = new Label();
             button1 = new Button();
             lblDisplay = new Label();
+            lblChicken1 = new Label();
+            label2 = new Label();
+            lblChicken2 = new Label();
+            lblChicken3 = new Label();
+            lblChicken4 = new Label();
             SuspendLayout();
             // 
             // num1
@@ -83,6 +88,7 @@
             button1.TabIndex = 5;
             button1.Text = "submit";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // lblDisplay
             // 
@@ -92,11 +98,61 @@
             lblDisplay.Size = new Size(0, 20);
             lblDisplay.TabIndex = 6;
             // 
+            // lblChicken1
+            // 
+            lblChicken1.AutoSize = true;
+            lblChicken1.Location = new Point(12, 113);
+            lblChicken1.Name = "lblChicken1";
+            lblChicken1.Size = new Size(68, 20);
+            lblChicken1.TabIndex = 7;
+            lblChicken1.Text = "Chicken1";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(0, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(50, 20);
+            label2.TabIndex = 8;
+            label2.Text = "label2";
+            // 
+            // lblChicken2
+            // 
+            lblChicken2.AutoSize = true;
+            lblChicken2.Location = new Point(111, 113);
+            lblChicken2.Name = "lblChicken2";
+            lblChicken2.Size = new Size(68, 20);
+            lblChicken2.TabIndex = 9;
+            lblChicken2.Text = "Chicken2";
+            // 
+            // lblChicken3
+            // 
+            lblChicken3.AutoSize = true;
+            lblChicken3.Location = new Point(227, 113);
+            lblChicken3.Name = "lblChicken3";
+            lblChicken3.Size = new Size(68, 20);
+            lblChicken3.TabIndex = 10;
+            lblChicken3.Text = "Chicken3";
+            // 
+            // lblChicken4
+            // 
+            lblChicken4.AutoSize = true;
+            lblChicken4.Location = new Point(325, 113);
+            lblChicken4.Name = "lblChicken4";
+            lblChicken4.Size = new Size(68, 20);
+            lblChicken4.TabIndex = 11;
+            lblChicken4.Text = "Chicken4";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblChicken4);
+            Controls.Add(lblChicken3);
+            Controls.Add(lblChicken2);
+            Controls.Add(label2);
+            Controls.Add(lblChicken1);
             Controls.Add(lblDisplay);
             Controls.Add(button1);
             Controls.Add(label1);
@@ -119,5 +175,10 @@
         private Label label1;
         private Button button1;
         private Label lblDisplay;
+        private Label lblChicken1;
+        private Label label2;
+        private Label lblChicken2;
+        private Label lblChicken3;
+        private Label lblChicken4;
     }
 }

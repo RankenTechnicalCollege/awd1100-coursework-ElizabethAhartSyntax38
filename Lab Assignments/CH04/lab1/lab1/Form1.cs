@@ -16,33 +16,40 @@ namespace lab1
 
         private void userInput1_TextChanged(object sender, EventArgs e)
         {
-            string mile = Console.ReadLine();
-            String Kilometer=Console.ReadLine();
-          double userInput1= Convert.ToDouble(mile);
-            double multiplied = userInput1, userinput2;
-            double userInput2= Convert.ToDouble(Kilometer);
-           
+
+
         }
 
         private void UserInput2_TextChanged(object sender, EventArgs e)
         {
-            string kilometer = Console.ReadLine();
+            
         }
 
         private void btnSubmit1_Click(object sender, EventArgs e)
         {
-            string lblDisplay = string.Format("{0} *{1}={2}");
-           
-}
+            
+            Decimal userInputMiles = Convert.ToDecimal(userInput1.Text);
+            labelDisplay.Text = (userInputMiles * 1.6m).ToString();
+            
 
+        }
+        
         private void btnSubmit2_Click(object sender, EventArgs e)
         {
-            string lbldisplay = string.Format("{2}*{1}={0}");
+            
+            Decimal UserInputKilometers = Convert.ToDecimal(UserInput2.Text);
+            labelDisplay.Text = (UserInputKilometers / 1.6m).ToString();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void userInput1_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

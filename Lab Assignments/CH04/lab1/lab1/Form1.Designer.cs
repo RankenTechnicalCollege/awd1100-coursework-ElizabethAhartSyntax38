@@ -38,7 +38,6 @@
             LblDisplay = new Label();
             label1 = new Label();
             labelDisplay = new Label();
-            label2 = new Label();
             SuspendLayout();
             // 
             // btnSubmit1
@@ -93,7 +92,6 @@
             userInput1.Name = "userInput1";
             userInput1.Size = new Size(125, 27);
             userInput1.TabIndex = 5;
-            userInput1.TextChanged += userInput1_TextChanged;
             // 
             // UserInput2
             // 
@@ -101,12 +99,11 @@
             UserInput2.Name = "UserInput2";
             UserInput2.Size = new Size(125, 27);
             UserInput2.TabIndex = 6;
-            UserInput2.TextChanged += UserInput2_TextChanged;
             // 
             // LblDisplay
             // 
             LblDisplay.AutoSize = true;
-            LblDisplay.Location = new Point(49, 328);
+            LblDisplay.Location = new Point(25, 335);
             LblDisplay.Name = "LblDisplay";
             LblDisplay.Size = new Size(0, 20);
             LblDisplay.TabIndex = 7;
@@ -124,26 +121,16 @@
             // labelDisplay
             // 
             labelDisplay.AutoSize = true;
-            labelDisplay.Location = new Point(72, 303);
+            labelDisplay.Location = new Point(48, 310);
             labelDisplay.Name = "labelDisplay";
             labelDisplay.Size = new Size(0, 20);
             labelDisplay.TabIndex = 9;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(56, 342);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 20);
-            label2.TabIndex = 10;
-            label2.Text = "label2";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label2);
             Controls.Add(labelDisplay);
             Controls.Add(label1);
             Controls.Add(LblDisplay);
@@ -156,7 +143,6 @@
             Controls.Add(btnSubmit1);
             Name = "Form1";
             Text = "lab1";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -173,7 +159,8 @@
         private Label LblDisplay;
         private Label label1;
         private Label labelDisplay;
-        private Label label2;
+    }
+}
     
 
 
