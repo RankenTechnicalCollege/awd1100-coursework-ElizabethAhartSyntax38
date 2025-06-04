@@ -33,6 +33,7 @@
             CmDisplay = new TextBox();
             lblCentDisplay = new Label();
             btnConvert = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // lblPromptInch
@@ -77,11 +78,20 @@
             btnConvert.UseVisualStyleBackColor = true;
             btnConvert.Click += btnConvert_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(602, 251);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 20);
+            label1.TabIndex = 5;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(btnConvert);
             Controls.Add(lblCentDisplay);
             Controls.Add(CmDisplay);
@@ -100,5 +110,6 @@
         private TextBox CmDisplay;
         private Label lblCentDisplay;
         private Button btnConvert;
+        private Label label1;
     }
 }

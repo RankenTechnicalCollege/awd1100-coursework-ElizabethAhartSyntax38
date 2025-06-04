@@ -49,6 +49,7 @@
             txtBoxGpa.Name = "txtBoxGpa";
             txtBoxGpa.Size = new Size(125, 27);
             txtBoxGpa.TabIndex = 1;
+          
             // 
             // btnSubmit
             // 

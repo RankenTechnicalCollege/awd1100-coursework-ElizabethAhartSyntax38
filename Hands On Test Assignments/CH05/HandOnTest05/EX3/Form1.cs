@@ -18,6 +18,7 @@ namespace EX3
             int InputWidth = Convert.ToInt32(txtBox2.Text);
             int Squarefeet = (InputLength * InputWidth);
             int Area = Squarefeet;
+           
             if (Squarefeet > 600)
             {
                 lblDisplayFEE.Text = $"50m";
@@ -29,49 +30,60 @@ namespace EX3
             else if (Squarefeet < 400)
             {
                 lblDisplayFEE.Text = "25m";
-                if (InputLength > 5)
-                {
-                    lblDisplayWKS.Text = $"5";
-                }
-                else if (InputLength > 10)
-                {
-                    lblDisplayWKS.Text = $"10";
-                }
-                else if (Squarefeet > 600) ;
-                {
-                    lblDisplayWKS.Text = $"20";
-                }
-                  if (Squarefeet >= 0) ;
-                    {
-                    lblArea.Text=$"{Squarefeet:c},FT";
-
-                    }
-             
-                
-                
-                    
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             }
+            if (InputLength > 100)
+            {
+                lblDisplayWKS.Text = $"5";
+            }
+            else if (InputLength > 300)
+            {
+                lblDisplayWKS.Text = $"10";
+            }
+            if (Squarefeet <= 600) ;
+
+            {
+                lblDisplayWKS.Text = $"20";
+            }
+            
+            
+
+
+
+                   if (Squarefeet <= 100) ;
+            {
+                lblArea.Text = $"{Squarefeet:c},FT";
+            }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            
 
 
 
         }
     }
 }
+
         
     
 

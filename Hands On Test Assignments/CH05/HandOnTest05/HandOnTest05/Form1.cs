@@ -11,13 +11,16 @@ namespace HandOnTest05
 
         private void btnConvert_Click(object sender, EventArgs e)
         {
-            decimal InputInch = Convert.ToDecimal(userInputInch.Text);
+            double InputInch = Convert.ToDouble(userInputInch.Text);
             
-            decimal Centimeters = InputInch * 30;
-            Constant CM_PER_INCH=new Constant();
+           double Centimeters = 2.54f;
+           double CM_PER_INCH = Centimeters *InputInch;
+            
+
             
             {
-                CmDisplay.Text =$"{Centimeters}";
+                CmDisplay.Text =$"{CM_PER_INCH:f}";
+                label1.Text =$"{InputInch} inches and {CM_PER_INCH:f}Centimeters";
             } 
 
             
