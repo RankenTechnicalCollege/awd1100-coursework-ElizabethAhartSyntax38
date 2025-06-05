@@ -32,13 +32,13 @@ Console.WriteLine("Enter Employee 3");
 String Name3=Console.ReadLine();
 Console.WriteLine("what is His or Her Salary?");
 double Sum4=Convert.ToDouble (Console.ReadLine());
-double SumEmp2 = (RAISERATE * Sum3);
-double SumEmp2yr2 = (SumEmp2 *RAISERATE) ;
-double SumEmp3=Sum4 * RAISERATE;
-double SumEmp3yrs2=SumEmp3* RAISERATE;
+double SumEmp2 = (RAISERATE1 * Sum3);
+double SumEmp2yr2 = (SumEmp2 *RAISERATE1) ;
+double SumEmp3= Sum4 * RAISERATE1;
+double SumEmp3yrs2= SumEmp3* RAISERATE1;
 Console.WriteLine("!!!!!!!!!!!!!!!!");
-Console.WriteLine($"{SumEmp2:c}{Name2}{SumEmp2yr2:c}");
-Console.WriteLine($"{SumEmp3:c}{Name3}{SumEmp3yrs2:c}");
+Console.WriteLine($"{SumEmp2:c} !1for the year 2025 !{Name2} !!{SumEmp2yr2:c} for the year 2026");
+Console.WriteLine($"{SumEmp3:c} !!for the year 2025 !{Name3}{SumEmp3yrs2:c} for the year 2026");
 
 
 
