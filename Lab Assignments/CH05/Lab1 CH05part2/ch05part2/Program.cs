@@ -1,4 +1,4 @@
-namespace Lab2
+namespace ch05part2
 {
     internal static class Program
     {
