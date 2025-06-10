@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab1 CH05part2", "..\..\..\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab3", "..\..\..\..\..\OneDrive\Documents\GitHub\awd1100-coursework-ElizabethAhartSyntax38\Lab Assignments\CH05\Lab1 CH05part2\Lab3\Lab3.csproj", "{C809E9D6-FA86-F2FB-5C5A-3584774730BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab4", "lab4\lab4.csproj", "{85886B09-E3F3-49F0-AE64-473575E0DF65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C809E9D6-FA86-F2FB-5C5A-3584774730BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C809E9D6-FA86-F2FB-5C5A-3584774730BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C809E9D6-FA86-F2FB-5C5A-3584774730BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85886B09-E3F3-49F0-AE64-473575E0DF65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85886B09-E3F3-49F0-AE64-473575E0DF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85886B09-E3F3-49F0-AE64-473575E0DF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85886B09-E3F3-49F0-AE64-473575E0DF65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
