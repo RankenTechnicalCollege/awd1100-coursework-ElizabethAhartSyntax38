@@ -39,22 +39,45 @@ namespace EX3
             {
                 lblDisplayWKS.Text = $"10";
             }
-            if (Squarefeet <= 600) ;
+            if (Squarefeet <= 600) 
 
             {
                 lblDisplayWKS.Text = $"20";
             }
             
-            
-
-
-
-                   if (Squarefeet <= 100) ;
+                   if (Squarefeet <= 100) 
             {
                 lblArea.Text = $"{Squarefeet:c},FT";
             }
- 
+                   else if(Squarefeet >=101)
+            {
+                lblArea.Text=$"{Squarefeet}FT";
+               
+            }
+            if (Squarefeet > 400 && Squarefeet < 600)
+            {
+                lblDisplayWKS.Text = "Minimum of 4 weeks at a time!";
+                lblDisplayCost.Text = $"240";
+            }
+            else if (Squarefeet > 600 && Squarefeet != 0)
+            {
+                lblDisplayWKS.Text = $"Over size has a minimum of 4 weeks at a time!";
+                lblDisplayCost.Text = $"100 handling fee Total 340";
 
+            }
+            else if (Squarefeet < 400)
+            {
+                lblDisplayWKS.Text = $"minimum of 3 weeks at a time!";
+                lblDisplayCost.Text = $"180";
+
+            }
+            else if ((Squarefeet < 400))
+                {
+                lblDisplayWKS.Text = $"minimum of two weeks at a time";
+                lblDisplayCost.Text = $"90";
+
+            }
+            
 
 
 
