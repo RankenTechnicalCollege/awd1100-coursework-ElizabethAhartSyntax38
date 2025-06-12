@@ -10,11 +10,16 @@ string cityStateZip=Console.ReadLine();
 
 Console.WriteLine("How many T-shirts Purchased?");
 string num = Console.ReadLine();
-
+double num3 =Convert.ToDouble(num)*(14.99);
 const float TAXRATE = 0.8f;
 double num2 =Convert.ToDouble(num) * (14.99)*(TAXRATE);
-Console.WriteLine($"Total Price is {num2:c}");
-
-Console.WriteLine($"Plus tax 0.8 Amount Due is {num2:c}");
+Console.WriteLine("***************SALES RECEIPT********************");
+Console.WriteLine( $"{name}");
+Console.WriteLine($"{Address}");
+Console.WriteLine($"{cityStateZip}");
+Console.WriteLine("*********************************");
+Console.WriteLine($"Total Price is {num3:c}");
+Console.WriteLine($"plus tax {num3}");
+Console.WriteLine($"Plus tax 0.8 Total Amount Due is {num2:c}");
 
 

@@ -11,6 +11,6 @@ Console.WriteLine("Write a third RANDOM Age!");
 
 int age3=Convert.ToInt32(Console.ReadLine());
 
-Double Average = (age + age2 + age3)/3;
+Decimal Average =Convert.ToDecimal (age + age2 + age3)/3;
 
-Console.WriteLine($"Average of Age is {Average}",Average);
+Console.WriteLine($"Average of Age is {Average:f}",Average);
