@@ -64,6 +64,7 @@
             txtBox1.Name = "txtBox1";
             txtBox1.Size = new Size(326, 27);
             txtBox1.TabIndex = 2;
+            txtBox1.TextChanged += txtBox1_TextChanged;
             // 
             // lblName
             // 

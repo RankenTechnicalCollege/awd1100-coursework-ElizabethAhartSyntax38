@@ -1,13 +1,14 @@
+
 namespace Lab3
 {
     public partial class Form1 : Form
     {
         public Form1()
         {
-              InitializeComponent();
-         
-           
-           
+            InitializeComponent();
+
+
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -19,20 +20,20 @@ namespace Lab3
             //string[] Game4 = new string[] { "BattleFeild 4", "Electronic Arts(EA)" };
             //string[] Game5 = new String[] { "superMario Odyssey", "Nintendo" };
             string[] Publishers = new string[] { "Nintendo", "Electronic Arts(EA)", "Activision", "Riot Game", "Blue hole" };
-            string[] Games =new string[] { "Player Uknown's Battlefeild Rounds (PUBG)", "League Of Legends", " Call Of Duty Blackopts III", "BattleFeild 4", "superMario Odyssey" };
+            string[] Games = new string[] { "Player Uknown's Battlefeild Rounds (PUBG)", "League Of Legends", " Call Of Duty Blackopts III", "BattleFeild 4", "superMario Odyssey" };
             string[] Price = new string[] { "35", "0", "60", "20", "60" };
-             string VideoGame = txtBox1.Text.ToLower();
+            string VideoGame = txtBox1.Text.ToLower();
 
 
-          
+
 
             for (int i = 0; i < Games.Length; i++)
-                if (Games[i].ToLower().Contains(VideoGame)==true || Publishers[i].ToLower().Contains(VideoGame)==true)
+                if (Games[i].ToLower().Contains(VideoGame) == true || Publishers[i].ToLower().Contains(VideoGame) == true)
                 {
                     lblDisplayName.Text = $"Artist found {Games[i]}";
-                    lblPublisher.Text =$"{ Publishers[i] }";
-                    lblDisplayPrice.Text =$"{ Price[i] }";
-                    break ;
+                    lblDisplayPub.Text = $"{Publishers[i]}";
+                    lblDisplayPrice.Text = $"{Price[i]}";
+                    break;
                 }
                 else
                 {
@@ -40,11 +41,16 @@ namespace Lab3
                     lblDisplayPrice.Text = "Game Not Found";
                     lblDisplayPub.Text = "Game Not Found";
                 }
-        
 
 
 
 
-                }
+
+        }
+
+        private void txtBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
