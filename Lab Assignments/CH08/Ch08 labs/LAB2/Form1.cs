@@ -20,11 +20,11 @@ namespace LAB2
             int TotalCost = 0;
             if (NumNights > 0 && NumNights < 50)
             {
-                txtTax.Text = "You Welcome to Stay!";
+                txtTax.Text = "Your Welcome to Stay!";
 
                 for (int i = 0; i < NightlyRate.Length; i++)
                 {
-                    if (NumNights == CareFreeResort[i])
+                    if (NumNights >= CareFreeResort[i])
                     {
                         txtNIGHT.Text = NightlyRate[i].ToString();
                         txtTotal.Text = $"{(NightlyRate[i] * NumNights):c}";

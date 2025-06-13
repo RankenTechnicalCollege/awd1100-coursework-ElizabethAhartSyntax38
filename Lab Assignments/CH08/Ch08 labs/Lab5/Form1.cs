@@ -15,7 +15,9 @@ namespace Lab5
         {
             string userInput1=Convert.ToString(textBox1.Text);
             char[] CardNumber = userInput1.ToCharArray();
-            //string[] CreditCard = new string[];
+            //string[] CreditCard = new string[
+            //
+            //];
             
 
 
