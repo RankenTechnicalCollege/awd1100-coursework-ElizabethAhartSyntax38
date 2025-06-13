@@ -57,6 +57,7 @@
             btnMask.TabIndex = 2;
             btnMask.Text = "MASK CARD";
             btnMask.UseVisualStyleBackColor = true;
+            btnMask.Click += btnMask_Click;
             // 
             // lblDisplay
             // 

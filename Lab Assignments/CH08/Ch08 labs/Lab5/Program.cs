@@ -13,5 +13,14 @@ namespace Lab5
             ApplicationConfiguration.Initialize();
             Application.Run(new lblDisplay());
         }
+      
+ 
+
+
+
+
     }
+
+
+
 }
