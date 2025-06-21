@@ -2,6 +2,9 @@ namespace Lab5
 {
     public partial class lblDisplay : Form
     {
+
+        
+
         public lblDisplay()
         {
             InitializeComponent();
@@ -20,7 +23,7 @@ namespace Lab5
             //];
             
 
-
+            
             for (int i = 0; i < CardNumber.Length; i++)
             {
                 if (Char.IsDigit(CardNumber[i]) == true && i < (CardNumber.Length - 4))
@@ -42,6 +45,7 @@ namespace Lab5
             string MaskedCardNum = new string(CardNumber);
                 lblDisplayNum.Text = MaskedCardNum.ToString();
         }
+        
 
     }
 }

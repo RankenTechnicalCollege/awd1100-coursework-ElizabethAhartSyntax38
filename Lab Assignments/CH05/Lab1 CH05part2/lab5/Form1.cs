@@ -11,6 +11,10 @@ namespace lab5
 
         }
 
+        private string CountVowel(string Phrase)
+        {
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 

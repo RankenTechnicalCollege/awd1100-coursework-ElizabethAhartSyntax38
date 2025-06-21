@@ -21,15 +21,15 @@ namespace lab2
             int sum1 = userInput2;
             int sum2 = userInput3;
             int Totalsum=sum+sum1 + sum2;
-            if (sum < sum1 && sum2 > sum)
+            if (sum < sum1 && sum2 > sum1)
                 lblDisplay2.Text = $"The Highest Score is {sum2}and the lowest score is {sum}";
              if
-                (sum1 > sum && sum > sum2) ;
+                (sum1 > sum && sum2 < sum) 
             lblDisplay2.Text = $"The highest Score is {sum1} and the Lowest Score is {sum2}";
-            if (sum > sum1 && sum1 < sum2)
-                lblDisplay2.Text = $"The Highest score is {sum} and the lowest Score is {sum1}";
+            if (sum2 > sum1 && sum1 < sum)
+                lblDisplay2.Text = $"The Highest score is {sum} and the lowest Score is {sum2}";
 
-            lblName.Text = $"Test scores Sum:{sum + sum1 + sum2}";
+            lblName.Text = $"Test scores Sum:{Totalsum}";
             lblDisplay1.Text = $"The Average Test Score is:{(Totalsum)/3}";
             
            
