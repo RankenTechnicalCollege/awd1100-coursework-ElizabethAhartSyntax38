@@ -17,27 +17,38 @@ namespace Lab1_2_3
         {
             InitializeComponent();
         }
-       
-        
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void IsStudentAccepted(float Gpa, int TestScores)
         {
-          
             bool Award = true;
             bool Deny = false;
-            int AdmissionScore =Convert.ToInt32( textBox2.Text);
-            decimal GPA=Convert.ToDecimal(textBox1.Text);
-            string[]StudentAward = new string[] {"Accept","Deny"};
+            int AdmissionScore = Convert.ToInt32(textBox2.Text);
+            decimal GPA = Convert.ToDecimal(textBox1.Text);
+            string[] StudentAward = new string[] { "Accept", "Deny" };
 
-            for (int i = 0;i<StudentAward.Length;i++)
+            for (int i = 0; i < StudentAward.Length; i++)
             {
                 if (AdmissionScore >= 80 || GPA >= 3)
                 {
                     lblDisplay.Text = StudentAward[0];
-                  
+
+
                 }
                 else
+
+
                 {
                     lblDisplay.Text = StudentAward[1];
+                }
+            }
+        }
+                   
+                   
+                
+        
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+          
+           IsStudentAccepted(0, 0);
                     
 
                     
@@ -52,10 +63,11 @@ namespace Lab1_2_3
 
 
         }
+
             
 
-        }
-    }
+        
+    
 
           
         

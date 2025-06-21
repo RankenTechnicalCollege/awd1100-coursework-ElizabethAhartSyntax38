@@ -23,7 +23,7 @@ namespace Lab6
                 string UserInput1 = txtBoxWood.Text;
                 if (WoodCHoice[i].Contains(UserInput1))
                 {
-                    lblDisplayCostW.Text = WoodCost[i];
+                    lblDisplayCostW.Text =$"{WoodCost[i]}" ;
                 }
 
 

@@ -11,7 +11,7 @@ namespace Book_Store_Inventory_Search
             InitializeComponent();
         }
 
-        private void SearchAuthor()
+        private void SearchAuthor(string Book)
         {
             string AuthorSearch = txtAuthor.Text;
             string[] KeyWords = new string[] {"The story of eccentric millionaire Jay Gatsby and his Pursuit of  his lost love.","A fictional story about the 1812 French Invasion of Russia.",
@@ -36,7 +36,7 @@ namespace Book_Store_Inventory_Search
                 }
         }
         
-        private void SearchByIsbn()
+        private void SearchByIsbn(string Code)
         {
             string IsbnSearch= txtIsbn.Text;
             string[] Author = new string[] { "F. Scott Fitgeral", "Leo Tolsby", "Herman Melville", "William Shakespeare", "Jane Auslen" };
@@ -62,7 +62,7 @@ namespace Book_Store_Inventory_Search
             
             
         }
-        private void SearchByKeyWord()
+        private void SearchByKeyWord(string KeyW)
         {
             string KeywordSearch = txtKeyWord.Text;
             string[] ISBN = new string[] { "978-1847496140", "978-1400079988", "978-1503280786", "978-1973844402", "978-0141439518" };
@@ -105,7 +105,7 @@ namespace Book_Store_Inventory_Search
 
         private void btnSearchAuth_Click(object sender, EventArgs e)
         {
-            SearchAuthor();
+            SearchAuthor("gatsby");
             {
                
             }
@@ -118,7 +118,7 @@ namespace Book_Store_Inventory_Search
 
         private void btnSearchIsbn_Click(object sender, EventArgs e)
         {
-            SearchByIsbn();
+            SearchByIsbn("gatsby");
             {
 
             }
@@ -127,7 +127,7 @@ namespace Book_Store_Inventory_Search
 
         private void btnSearchKeyWord_Click(object sender, EventArgs e)
         {
-            SearchByKeyWord();
+            SearchByKeyWord("scott");
             {
 
             }

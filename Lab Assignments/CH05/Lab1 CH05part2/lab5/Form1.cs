@@ -11,11 +11,7 @@ namespace lab5
 
         }
 
-        private string CountVowel(string Phrase)
-        {
-
-        }
-        private void button1_Click(object sender, EventArgs e)
+        private void CountVowel(string Phrase)
         {
 
             string Phrases = txtBox1.Text;
@@ -28,30 +24,35 @@ namespace lab5
                 if ('a' == Phrases[i])
                 {
                     vowel++;
-                    
+
                 }
                 else if ('e' == Phrases[i])
                 {
                     vowel++;
-                    
+
                 }
                 else if ('i' == Phrases[i])
                 {
                     vowel++;
-                    
+
                 }
                 else if ('o' == Phrases[i])
                 {
                     vowel++;
-                    
+
                 }
                 else if ('u' == Phrases[i])
                 {
                     vowel++;
-                  
+
                 }
             }
             lbl1.Text = $"The number of vowels in your phrase is {vowel}";
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            CountVowel((string)txtBox1.Text);
             
 
 

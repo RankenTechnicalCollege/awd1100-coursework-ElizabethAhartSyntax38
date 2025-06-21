@@ -49,6 +49,7 @@
             rTxtBox.Size = new Size(206, 167);
             rTxtBox.TabIndex = 1;
             rTxtBox.Text = "";
+            rTxtBox.TextChanged += rTxtBox_TextChanged;
             // 
             // Lab1
             // 
