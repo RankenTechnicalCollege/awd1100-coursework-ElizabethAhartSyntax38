@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UIControls.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+            <Label Text="Multi-line Input:"/>
+            <Editor Placeholder="Eneter Your Comments Here" AutoSize="TextChanges" />
+
+
+            <Label Text="Sample Image: "/>
+            <Image Source="splash.png" HeightRequest="100" WidthRequest="100" />
+
+            <HorizontalStackLayout>
+                
+           
+                <CheckBox x:Name="ChKAgree" />
+                <Label Text="I Agree to the terms" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <Label Text="Choose A Color"/>
+            <VerticalStackLayout>
+                <RadioButton Content="Red" GroupName="Colors"/>
+                <RadioButton Content="Green" GroupName="Colors"/>
+                <RadioButton Content="Blue" GroupName="Colors"/>
+
+                <HorizontalStackLayout>
+                    <Label Text="Enable Notifications" VerticalOptions="Center"/>
+                    <Switch x:Name="SwitchNotification"/>
+
+                    <Label Text="Volume" />
+                    <Slider Minimum="0" Maximum="100" Value="50" />
+
+                    <Label Text="Quantity:" />
+                    <Stepper Minimum="10" Increment="1" Value="1" />
+
+                    <Label Text="Select a date:" />
+                    <DatePicker />
+
+                    <Label Text="Select a time" />
+                    <TimePicker />
+
+                    <Label Text="Select a fruit" />
+                    <Picker>
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Apple</x:String>
+                                <x:String>Bananas</x:String>
+                                <x:String>Cherry</x:String>
+                            </x:Array>
+                            
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <Label Text="Search" />
+                    <SearchBar Placeholder="Type to Search ....." />
+
+                    <Label Text="Loading Progress:" />
+                    <ProgressBar Progress="0.75" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

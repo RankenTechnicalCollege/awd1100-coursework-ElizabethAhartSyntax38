@@ -38,8 +38,9 @@
             txtboxDeposit = new TextBox();
             txtBoxwithdraw = new TextBox();
             lblDisplayPrompt = new Label();
-            button1 = new Button();
+            btnDeposit = new Button();
             btnWithdraw = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // lblAccPrompt
@@ -128,15 +129,16 @@
             lblDisplayPrompt.TabIndex = 9;
             lblDisplayPrompt.Text = "_";
             // 
-            // button1
+            // btnDeposit
             // 
-            button1.Font = new Font("Segoe UI", 9F);
-            button1.Location = new Point(428, 316);
-            button1.Name = "button1";
-            button1.Size = new Size(85, 29);
-            button1.TabIndex = 10;
-            button1.Text = "DEPOSIT";
-            button1.UseVisualStyleBackColor = true;
+            btnDeposit.Font = new Font("Segoe UI", 9F);
+            btnDeposit.Location = new Point(428, 316);
+            btnDeposit.Name = "btnDeposit";
+            btnDeposit.Size = new Size(85, 29);
+            btnDeposit.TabIndex = 10;
+            btnDeposit.Text = "DEPOSIT";
+            btnDeposit.UseVisualStyleBackColor = true;
+            btnDeposit.Click += button1_Click;
             // 
             // btnWithdraw
             // 
@@ -146,14 +148,27 @@
             btnWithdraw.TabIndex = 11;
             btnWithdraw.Text = "Withdraw";
             btnWithdraw.UseVisualStyleBackColor = true;
+            btnWithdraw.Click += btnWithdraw_Click;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 12F);
+            button1.Location = new Point(13, 382);
+            button1.Name = "button1";
+            button1.Size = new Size(222, 56);
+            button1.TabIndex = 12;
+            button1.Text = "LOGOUT ( *)";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnWithdraw);
             Controls.Add(button1);
+            Controls.Add(btnWithdraw);
+            Controls.Add(btnDeposit);
             Controls.Add(lblDisplayPrompt);
             Controls.Add(txtBoxwithdraw);
             Controls.Add(txtboxDeposit);
@@ -183,7 +198,8 @@
         private TextBox txtboxDeposit;
         private TextBox txtBoxwithdraw;
         private Label lblDisplayPrompt;
-        private Button button1;
+        private Button btnDeposit;
         private Button btnWithdraw;
+        private Button button1;
     }
 }

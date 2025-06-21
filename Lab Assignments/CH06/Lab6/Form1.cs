@@ -1,3 +1,5 @@
+using System.Drawing.Text;
+
 namespace Lab6
 {
     public partial class Form1 : Form
@@ -6,8 +8,46 @@ namespace Lab6
         {
             InitializeComponent();
         }
-        string[] WoodCHoice = new string[] { "Mahogany", "Oak", "Pine", "Other" };
-        Double[] WoodCost = new double[] { 180, 140, 100, 180 };
+        private double GetWood()
+        {
+            int UserInput2 = Convert.ToInt32(txtBoxDrawerCount.Text);
+            int NumDrawer = Convert.ToInt32(txtBoxDrawerCount);
+            string UserInput1 = txtBoxWood.Text;
+            string[] WoodCHoice = new string[] { "Mahogany", "Oak", "Pine", "Other" };
+            double[] WoodCost = new double[] { 180, 140, 100, 180 };
+            for (int i = 0; i < 10; i++)
+
+                if (WoodCHoice[i].Contains(UserInput1.ToLower()))
+                {
+                    string WoodChoice =WoodCHoice[i];
+                    double WoodTotal=WoodCost[i];
+
+                    lblDisplayCostW.Text = $"{WoodCHoice[i]},{WoodCost[i]}";
+                    return WoodCost[i];
+                } 
+                else
+                {
+                    lblDisplayCostW.Text = $"Wood NOT Found";
+                   
+                }
+
+               
+            }
+
+        
+        private int GetDrawer()
+
+        {
+            double[] WoodCost = new double[] { 180, 140, 100, 180 };
+            int NumDrawer = Convert.ToInt32(txtBoxDrawerCount);
+            int totalCost = NumDrawer * 30;
+            
+            {   lblCostDrawer.Text = totalCost.ToString() ;
+                
+                return totalCost;
+            }
+        }
+        
 
 
 
@@ -15,19 +55,12 @@ namespace Lab6
 
         private void btnEstimate_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 100; i++)
-            {
 
-                int UserInput2 = Convert.ToInt32(txtBoxDrawerCount.Text);
-                int NumDrawer = Convert.ToInt32(txtBoxDrawerCount);
-                string UserInput1 = txtBoxWood.Text;
-                if (WoodCHoice[i].Contains(UserInput1))
-                {
-                    lblDisplayCostW.Text =$"{WoodCost[i]}" ;
-                }
-
+            GetWood();
+            GetDrawer();
 
             }
         }
     }
-}
+
+
