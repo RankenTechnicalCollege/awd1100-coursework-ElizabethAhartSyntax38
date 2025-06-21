@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace Factorial_income
+namespace FactorialCalc_TaxIncome
 {
     [Application]
     public class MainApplication : MauiApplication

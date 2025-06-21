@@ -2,7 +2,7 @@ using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 
-namespace Factorial_income
+namespace FactorialCalc_TaxIncome
 {
     internal class Program : MauiApplication
     {

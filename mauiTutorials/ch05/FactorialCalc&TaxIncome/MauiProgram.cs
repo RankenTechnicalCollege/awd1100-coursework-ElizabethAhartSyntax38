@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace Factorial_income
+namespace FactorialCalc_TaxIncome
 {
     public static class MauiProgram
     {

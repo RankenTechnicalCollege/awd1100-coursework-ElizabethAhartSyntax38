@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace Factorial_income
+namespace FactorialCalc_TaxIncome
 {
     public class Program
     {

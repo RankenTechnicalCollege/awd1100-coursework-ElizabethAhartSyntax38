@@ -1,4 +1,4 @@
-﻿namespace Factorial_income
+﻿namespace FactorialCalc_TaxIncome
 {
     public partial class App : Application
     {

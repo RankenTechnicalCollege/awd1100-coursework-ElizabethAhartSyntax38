@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace Factorial_income
+namespace FactorialCalc_TaxIncome
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate
