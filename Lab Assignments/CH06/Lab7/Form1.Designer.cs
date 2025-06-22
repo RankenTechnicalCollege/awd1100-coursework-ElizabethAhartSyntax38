@@ -123,7 +123,7 @@
             // 
             lblDisplayPrompt.AutoSize = true;
             lblDisplayPrompt.Font = new Font("Segoe UI", 12F);
-            lblDisplayPrompt.Location = new Point(502, 248);
+            lblDisplayPrompt.Location = new Point(32, 247);
             lblDisplayPrompt.Name = "lblDisplayPrompt";
             lblDisplayPrompt.Size = new Size(20, 28);
             lblDisplayPrompt.TabIndex = 9;

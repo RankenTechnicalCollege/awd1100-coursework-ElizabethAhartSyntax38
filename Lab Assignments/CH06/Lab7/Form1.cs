@@ -8,43 +8,63 @@ namespace Lab7
         {
             InitializeComponent();
         }
+
+       
         private void Login(string AccNum,string Pin)
         {
-            string[] AccountNumber = txtAccount.Text.Split(',');
-            string[] PinNum = txtPin.Text.Split(',');
-            int AccountBal = 10000;
-            int i = 0;
-            char[] ReplacementChar = new char[] { '#' };
-            do
+            string[] AccountNumber = {"5551212","5554242","5556363","5558787","5551111","5559595","5554747","5554141"};
+            string[] PinNum = {"1234","2345","3333","6545","1212","6060","1515","8787"};
+            decimal[] AccountBalance = { 100000m, 10000m, 10000, 10000m, 10000m, 10000m, 10000m, 10000m,};
+           int AccountBal = 10000;
+           char[] ReplacementChar = new char[] { '#' };
+            
+           
+            for (int i = 0; i <ReplacementChar.Length; i++)
             {
-                btnLog.Enabled = true;
-                lblDisplayWelcome.Text = "Welcome Account Member ";
-                lblDisplayAccountBal.Text = $"Your Account Balance is {AccountBal:c}";
-                lblDisplayPrompt.Text = $"Would you like to deposit OR Make a Withdraw? AccountMember {AccountNumber[i]}";
-            } while (AccountNumber.Length >= i);
+                if (txtAccount.Text.Contains(AccountNumber[i]))
+                {
+                    btnLog.Enabled = true;
+                    lblDisplayWelcome.Text = "Welcome Account Member ";
+                    lblDisplayAccountBal.Text = $"Your Account Balance is {AccountBal:c}";
+                    lblDisplayPrompt.Text = $"Would you like to deposit OR Make a Withdraw? AccountMember {AccountNumber[i]}";
+                }else if (txtPin.Text.Contains(PinNum[i]))
+                {
+                    btnLog.Enabled = true;
+                    lblDisplayWelcome.Text = "Welcome Account Member ";
+                    lblDisplayAccountBal.Text = $"Your Account Balance is {AccountBal:c}";
+                    lblDisplayPrompt.Text = $"Would you like to deposit OR Make a Withdraw? AccountMember {AccountNumber[i]}";
+                }
+                txtPin.Clear();
+                txtAccount.Clear();
+            }
+            
+                
+             
 
         }
-        private void MakeDeposit(decimal DepositAmount)
+        private void MakeDeposit()
         {
             decimal UserInputDepo = Convert.ToDecimal(txtboxDeposit.Text);
             decimal AccountBal = 10000;
-            if (DepositAmount < 0)
+            if (UserInputDepo > 0)
             {
-                DepositAmount = AccountBal + UserInputDepo;
-                lblDisplayAccountBal.Text = $"Yor New Balance is {DepositAmount:c}";
+               UserInputDepo = AccountBal + UserInputDepo;
+                lblDisplayAccountBal.Text = $"Yor New Balance is {UserInputDepo:c}";
             }
         }
-        private void MakeWithdraw(decimal WithdrawAmount)
+        private void MakeWithdraw()
         {
+
             decimal UserInputWith = Convert.ToDecimal(txtBoxwithdraw.Text);
             decimal AccountBal = 10000;
-            if (WithdrawAmount < 0)
+            if (UserInputWith > 0)
             {
-                WithdrawAmount = AccountBal - UserInputWith;
+                UserInputWith = AccountBal - UserInputWith;
                 {
-                    lblDisplayAccountBal.Text = $"Your Updated Balance is {WithdrawAmount:c}";
+                    lblDisplayAccountBal.Text = $"Your Updated Balance is {UserInputWith:c}";
                 }
             }
+            txtboxDeposit.Clear();
         }
         private void LogOut()
         {
@@ -67,13 +87,13 @@ namespace Lab7
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MakeDeposit(1);
+            MakeDeposit();
 
         }
 
         private void btnWithdraw_Click(object sender, EventArgs e)
         {
-            MakeWithdraw(1);
+            MakeWithdraw();
         }
 
         private void button1_Click_1(object sender, EventArgs e)

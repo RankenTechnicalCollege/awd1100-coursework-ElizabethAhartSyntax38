@@ -25,43 +25,111 @@ namespace Book_Store_Inventory_Search
                     lblDisplayAuthor.Text = $"{Author[i]}";
                     lblDisplayIsbn.Text = $"{ISBN[i]}";
                     lblDisplayDescript.Text = $"{KeyWords[i]}";
-                    lblDisplayname.Text=$"{Name[i]}";
+                    lblDisplayname.Text = $"{Name[i]}";
                     break;
 
                 }
                 else
+                if (KeyWords[i].ToLower().Contains(AuthorSearch))
                 {
-                    lblDisplayAuthor.Text = "Author Not Found";
+                    {
+                        lblDisplayAuthor.Text = $"{Author[i]}";
+                        lblDisplayIsbn.Text = $"{ISBN[i]}";
+                        lblDisplayDescript.Text = $"{KeyWords[i]}";
+                        lblDisplayname.Text = $"{Name[i]}";
+                        break;
+
+                    }
+                }
+                else if (ISBN[i].ToLower().Contains(AuthorSearch))
+                {
+
+                    {
+                        lblDisplayAuthor.Text = $"{Author[i]}";
+                        lblDisplayIsbn.Text = $"{ISBN[i]}";
+                        lblDisplayDescript.Text = $"{KeyWords[i]}";
+                        lblDisplayname.Text = $"{Name[i]}";
+                        break;
+                    }
 
                 }
+            else if (Name[i].ToLower().Contains(AuthorSearch))
+
+                 
+                        {
+                            lblDisplayAuthor.Text = $"{Author[i]}";
+                            lblDisplayIsbn.Text = $"{ISBN[i]}";
+                            lblDisplayDescript.Text = $"{KeyWords[i]}";
+                            lblDisplayname.Text = $"{Name[i]}";
+                            break;
+                        }
+                else
+                {
+                    lblDisplayAuthor.Text = "Author Not Found";
+                    lblDisplayIsbn.Text = "ISBN Not Found";
+                    lblDisplayDescript.Text = "KEYWORD Not Found";
+                    lblDisplayname.Text = "Book Not Found";
+                }
         }
-        
+
         private void SearchByIsbn(string Code)
         {
-            string IsbnSearch= txtIsbn.Text;
+            string IsbnSearch = txtIsbn.Text;
             string[] Author = new string[] { "F. Scott Fitgeral", "Leo Tolsby", "Herman Melville", "William Shakespeare", "Jane Auslen" };
             string[] KeyWords = new string[] {"The story of eccentric millionaire Jay Gatsby and his Pursuit of  his lost love.","A fictional story about the 1812 French Invasion of Russia.",
                 "The story of a Sailor's Relentless hunt for a White Whale.","A Shakesperean tragedy about a young man coming home from college after the murder of his father.","A Comedic story of love and life in Old England." };
             string[] Name = new string[] { "The Great Gatsby", "War and Peace", "Moby-Dick", "Hamlet", "Pride and Predjudice" };
             string[] ISBN = new string[] { "978-1847496140", "978-1400079988", "978-1503280786", "978-1973844402", "978-0141439518" };
-            for(int i = 0;i < ISBN.Length; i++)
+            for (int i = 0; i < ISBN.Length; i++)
             {
                 if (ISBN[i].Contains(IsbnSearch))
                 {
                     lblDisplayIsbn.Text = $"{ISBN}";
-                    lblDisplayname.Text =$"{Name[i]}";
+                    lblDisplayname.Text = $"{Name[i]}";
                     lblDisplayDescript.Text = $"{KeyWords[i]}";
-                    lblDisplayAuthor.Text=$"{Author[i]}";
+                    lblDisplayAuthor.Text = $"{Author[i]}";
                     break;
                 }
                 else
                 {
-                    lblDisplayIsbn.Text = $"ISBN NOT FOUND";
+                    if (Author[i].Contains(IsbnSearch))
+                    {
+                        lblDisplayIsbn.Text = $"{ISBN}";
+                        lblDisplayname.Text = $"{Name[i]}";
+                        lblDisplayDescript.Text = $"{KeyWords[i]}";
+                        lblDisplayAuthor.Text = $"{Author[i]}";
+                        break;
+
+                    }
+                    else
+                    {
+                        if (Name[i].Contains(IsbnSearch))
+                        {
+                            lblDisplayIsbn.Text = $"{ISBN}";
+                            lblDisplayname.Text = $"{Name[i]}";
+                            lblDisplayDescript.Text = $"{KeyWords[i]}";
+                            lblDisplayAuthor.Text = $"{Author[i]}";
+                            break;
+                        }
+                       
+                            else
+                            {
+                                lblDisplayAuthor.Text = "Author Not Found";
+                                lblDisplayIsbn.Text = "ISBN Not Found";
+                                lblDisplayDescript.Text = "KEYWORD Not Found";
+                                lblDisplayname.Text = "Book Not Found";
+                            }
+
+                        }
+
+                    }
+
+
                 }
             }
-            
-            
-        }
+        
+        
+
         private void SearchByKeyWord(string KeyW)
         {
             string KeywordSearch = txtKeyWord.Text;
@@ -77,15 +145,43 @@ namespace Book_Store_Inventory_Search
                     lblDisplayDescript.Text = $"{KeyWords[i]}";
                     lblDisplayAuthor.Text = $"{Name[i]}";
                     lblDisplayname.Text = $"{Name[i]}";
-                    lblDisplayIsbn.Text = $"{ISBN[i]}" ;
+                    lblDisplayIsbn.Text = $"{ISBN[i]}";
+                    break;
+                }
+                else if (Author[i].Contains(KeywordSearch))
+                {
+                    lblDisplayDescript.Text = $"{KeyWords[i]}";
+                    lblDisplayAuthor.Text = $"{Name[i]}";
+                    lblDisplayname.Text = $"{Name[i]}";
+                    lblDisplayIsbn.Text = $"{ISBN[i]}";
+                    break;
+                }
+                else if (Name[i].Contains(KeywordSearch))
+                {
+                    lblDisplayDescript.Text = $"{KeyWords[i]}";
+                    lblDisplayAuthor.Text = $"{Name[i]}";
+                    lblDisplayname.Text = $"{Name[i]}";
+                    lblDisplayIsbn.Text = $"{ISBN[i]}";
+                    break;
+                }
+                else if (ISBN[i].Contains(KeywordSearch))
+                {
+                    lblDisplayDescript.Text = $"{KeyWords[i]}";
+                    lblDisplayAuthor.Text = $"{Name[i]}";
+                    lblDisplayname.Text = $"{Name[i]}";
+                    lblDisplayIsbn.Text = $"{ISBN[i]}";
                 }
                 else
                 {
-                    lblDisplayDescript.Text = "DESCRIPTION NOT FOUND";
+                    lblDisplayAuthor.Text = "Author Not Found";
+                    lblDisplayIsbn.Text = "ISBN Not Found";
+                    lblDisplayDescript.Text = "KEYWORD Not Found";
+                    lblDisplayname.Text = "Book Not Found";
                 }
-                
             }
+
         }
+        
         private void ShowBook()
         {
             string KeywordSearch = txtKeyWord.Text;
