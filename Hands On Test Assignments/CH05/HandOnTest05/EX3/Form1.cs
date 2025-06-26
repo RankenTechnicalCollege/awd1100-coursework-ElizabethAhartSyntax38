@@ -1,5 +1,7 @@
+using Microsoft.VisualBasic;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.Eventing.Reader;
+using System.Security.Cryptography.X509Certificates;
 
 namespace EX3
 {
@@ -9,16 +11,27 @@ namespace EX3
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
+            string IsPresent(string name, string value)
+            {
+                string errorMessage ="";
+                if (value =="")
+                {
+                    errorMessage += name + "is a required feild.";
+
+                }
+                return errorMessage;
+            }
             int i = 50;
             int InputLength = Convert.ToInt32(txtBox1.Text);
             int InputWidth = Convert.ToInt32(txtBox2.Text);
             int Squarefeet = (InputLength * InputWidth);
             int Area = Squarefeet;
-           
+          
             if (Squarefeet > 600)
             {
                 lblDisplayFEE.Text = $"50m";
@@ -72,11 +85,15 @@ namespace EX3
 
             }
             else if ((Squarefeet < 400))
-                {
+            {
                 lblDisplayWKS.Text = $"minimum of two weeks at a time";
                 lblDisplayCost.Text = $"90";
+            }
+               
+
 
             }
+           
             
 
 
@@ -105,7 +122,7 @@ namespace EX3
 
         }
     }
-}
+
 
         
     
