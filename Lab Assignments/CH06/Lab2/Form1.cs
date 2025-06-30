@@ -1,4 +1,5 @@
 using System.Collections.Immutable;
+using System.Runtime.CompilerServices;
 
 namespace Lab2
 {
@@ -8,18 +9,30 @@ namespace Lab2
         {
             InitializeComponent();
         }
-                public void SortWords(string[] UnsortedWords)
+        public void SortWords(string[] UnsortedWords)
         {
-            
-          txtBoxPhrase.Text=UnsortedWords.ToString();
-            Array.Sort(UnsortedWords);
-            lblDisplay.Text=UnsortedWords[0];
+
+
            
-               
+            Array.Sort(UnsortedWords);
+           
+            foreach (string word in UnsortedWords)
+            {
+                lblDisplay.Text += word + " "; 
             }
+
+
+        }
+        
         private void btnSort_Click(object sender, EventArgs e)
         {
-             SortWords([]);
+            string phrase=txtBoxPhrase.Text;
+            string[] UnsortedWords =phrase.Split(' ');
+            
+
+            SortWords(UnsortedWords);
+            
+            
         }
 
 
