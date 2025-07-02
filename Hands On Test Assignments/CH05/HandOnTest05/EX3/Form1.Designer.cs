@@ -41,6 +41,7 @@
             lblDisplayWKS = new Label();
             lblDisplayFEE = new Label();
             lblDisplayArea = new Label();
+            lblError = new Label();
             SuspendLayout();
             // 
             // lblLength
@@ -153,11 +154,22 @@
             lblDisplayArea.Size = new Size(0, 20);
             lblDisplayArea.TabIndex = 9;
             // 
+            // lblError
+            // 
+            lblError.AutoSize = true;
+            lblError.Font = new Font("Segoe UI", 20F);
+            lblError.Location = new Point(443, 373);
+            lblError.Name = "lblError";
+            lblError.Size = new Size(34, 46);
+            lblError.TabIndex = 13;
+            lblError.Text = "_";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblError);
             Controls.Add(lblDisplayCost);
             Controls.Add(lblDisplayWKS);
             Controls.Add(lblDisplayFEE);
@@ -192,5 +204,6 @@
         private Label lblDisplayWKS;
         private Label lblDisplayFEE;
         private Label lblDisplayArea;
+        private Label lblError;
     }
 }

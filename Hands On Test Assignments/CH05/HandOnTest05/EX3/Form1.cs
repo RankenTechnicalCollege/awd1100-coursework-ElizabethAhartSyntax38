@@ -11,27 +11,37 @@ namespace EX3
         public Form1()
         {
             InitializeComponent();
-            
+
         }
+      private string  IsPresent(string Length, string Width)
+        {
+
+            string errorMessage = "";
+            
+           
+            if (Length == "" && Width == "")
+            {
+                
+                errorMessage = "is a required feild.";
+                
+
+            }
+            return errorMessage;
+           
+        }
+
+
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            string IsPresent(string name, string value)
-            {
-                string errorMessage ="";
-                if (value =="")
-                {
-                    errorMessage += name + "is a required feild.";
+            IsPresent("","");
 
-                }
-                return errorMessage;
-            }
             int i = 50;
             int InputLength = Convert.ToInt32(txtBox1.Text);
             int InputWidth = Convert.ToInt32(txtBox2.Text);
             int Squarefeet = (InputLength * InputWidth);
             int Area = Squarefeet;
-          
+
             if (Squarefeet > 600)
             {
                 lblDisplayFEE.Text = $"50m";
@@ -52,20 +62,20 @@ namespace EX3
             {
                 lblDisplayWKS.Text = $"10";
             }
-            if (Squarefeet <= 600) 
+            if (Squarefeet <= 600)
 
             {
                 lblDisplayWKS.Text = $"20";
             }
-            
-                   if (Squarefeet <= 100) 
+
+            if (Squarefeet <= 100)
             {
-                lblArea.Text = $"{Squarefeet:c},FT";
+                lblDisplayArea.Text = $"{Squarefeet:c},FT";
             }
-                   else if(Squarefeet >=101)
+            else if (Squarefeet >= 101)
             {
-                lblArea.Text=$"{Squarefeet}FT";
-               
+                lblDisplayArea.Text = $"{Squarefeet}FT";
+
             }
             if (Squarefeet > 400 && Squarefeet < 600)
             {
@@ -89,39 +99,44 @@ namespace EX3
                 lblDisplayWKS.Text = $"minimum of two weeks at a time";
                 lblDisplayCost.Text = $"90";
             }
-               
-
-
-            }
            
             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             
-            
+
 
 
 
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+    
 
 
         
