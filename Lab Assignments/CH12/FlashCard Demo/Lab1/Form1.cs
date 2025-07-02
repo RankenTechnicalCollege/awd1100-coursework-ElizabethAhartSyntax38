@@ -68,13 +68,18 @@ namespace Lab1
 
                 if (txtName.Text.ToLower() != "") 
                     {
-                         FlashCard flashCardToAdd =new (Name, txtDescription.Text, txtYear.Text);
+                    FlashCard[] AddDefinitions = new FlashCard[20];
+                    
+                        
                     string flashCardName = txtName.Text;
                         string flashCardDescription = txtDescription.Text;
                         string flashCardYear=txtYear.Text;
 
                     lblDisplay2.Text = "Definitions Added!";
-                     lblDisplay2.Text= $"{txtName} is your New Word\n" +$"{txtDescription}is The Definition AND\n" +$"{txtYear} is the Trending\n";
+                    lblDisplay2.Text += $"{txtName.Text} is your New Word\n";
+                    lblDisplay2.Text += $"{txtDescription.Text}  is The Definition AND  \n";
+                    lblDisplay2.Text  +=$"{txtYear.Text} is the Trending  \n";
+                    txtBoxDefine.Text = flashCardName;
                     break;
                      
                 

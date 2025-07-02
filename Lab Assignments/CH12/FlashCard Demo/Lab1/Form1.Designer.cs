@@ -157,10 +157,10 @@
             // lblDisplay2
             // 
             lblDisplay2.AccessibleName = "GroupBox1";
-            lblDisplay2.Font = new Font("Segoe UI", 12F);
+            lblDisplay2.Font = new Font("Segoe UI", 9F);
             lblDisplay2.Location = new Point(441, 220);
             lblDisplay2.Name = "lblDisplay2";
-            lblDisplay2.Size = new Size(260, 131);
+            lblDisplay2.Size = new Size(299, 171);
             lblDisplay2.TabIndex = 11;
             lblDisplay2.Text = "_";
             lblDisplay2.Visible = false;
