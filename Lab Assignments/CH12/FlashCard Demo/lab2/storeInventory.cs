@@ -8,34 +8,36 @@ namespace lab2
 {
     public class storeInventory
     {
-       
+
         private decimal _unitsPerCase;
         private decimal _unitPrice;
         private int _InventoryNumber;
         public string InventoryName { get; set; }
 
-    
-    public Decimal UnitPrice
+
+        public Decimal UnitPrice
         {
-            get {return _unitPrice;}
-            set {_unitPrice = value;}
+            get { return _unitPrice; }
+            set { _unitPrice = value; }
         }
         public int InventoryNumber
         {
-            get {return _InventoryNumber;}
-            set {_InventoryNumber = value;}
-            
+            get { return _InventoryNumber; }
+            set { _InventoryNumber = value; }
+
         }
-        public override string ToString()
-        {
-            return $"The INVENTORY NUMBER: {InventoryNumber} The Inventory Name is {InventoryName} and The Price Per Unit is {UnitPrice}";
-        }
-      
+
+
         public Decimal UnitsPerCase
         {
-           set { _unitsPerCase = 144; }
+            set { _unitsPerCase = 144; }
         }
         
 
+        
+         public override string ToString()
+        {
+            return $"The INVENTORY NUMBER: {InventoryNumber} The Inventory Name is {InventoryName} and The Price Per Unit is {_unitsPerCase}";
         }
+    }
 }
