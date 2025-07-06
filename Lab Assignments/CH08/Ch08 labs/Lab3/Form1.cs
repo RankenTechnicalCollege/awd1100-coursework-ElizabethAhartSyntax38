@@ -10,15 +10,29 @@ namespace Lab3
 
 
         }
+        private float GetPrice()
+        {
+            float[] Price = new float[] {35, 0, 60, 20, 60 };
+            string VideoGame = txtBox1.Text.ToLower();
+            return Price[04];
+        }
+        private string GetGame()
+        {
+            string VideoGame = txtBox1.Text.ToLower();
+            string[] Games = new string[] { "Player Uknown's Battlefeild Rounds (PUBG)", "League Of Legends", " Call Of Duty Blackopts III", "BattleFeild 4", "superMario Odyssey" };
+            return Games[04];
+
+        }
+        private string GetPublisher()
+        {
+            string VideoGame = txtBox1.Text.ToLower();
+            string[] Publishers = new string[] { "Nintendo", "Electronic Arts(EA)", "Activision", "Riot Game", "Blue hole" };
+            return VideoGame;
+        }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
-            //string[] Game = new string[] { "Player Uknown's Battlefeild Rounds (PUBG)", "Blue hole" };
-            //String[] Game2 = new String[] { "League Of Legends", "Riot Game" };
-            //string[] Game3 = new String[] { "Call Of Duty Blackopts III", "Activision" };
-            //string[] Game4 = new string[] { "BattleFeild 4", "Electronic Arts(EA)" };
-            //string[] Game5 = new String[] { "superMario Odyssey", "Nintendo" };
             string[] Publishers = new string[] { "Nintendo", "Electronic Arts(EA)", "Activision", "Riot Game", "Blue hole" };
             string[] Games = new string[] { "Player Uknown's Battlefeild Rounds (PUBG)", "League Of Legends", " Call Of Duty Blackopts III", "BattleFeild 4", "superMario Odyssey" };
             string[] Price = new string[] { "35", "0", "60", "20", "60" };

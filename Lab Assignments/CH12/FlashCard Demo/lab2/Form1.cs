@@ -10,7 +10,7 @@ namespace lab2
       
         
        
-        string[] StoreInventory=new string[5] {"SUGAR 15 bucks 123123 3 casesPerUnit","T-SHIRTS 10 Bucks 555123 10 Cases Per","HOTSAUCE 24Pk 15Bucks 125125","Wall Mount 12bucks 2pk 157157","Computer 1000bucks 5pk 155155"};
+        string[] StoreInventory=new string[5] {"SUGAR 15 bucks 123123 3casesPerUnit","T-SHIRTS 10 Bucks 555123 10 Cases PerUnit","HOTSAUCE 24Pk 15Bucks 125125","Wall Mount 12bucks 2pk 157157","Computer 1000bucks 5pk 155155"};
         public Form1()
         {
             InitializeComponent();
@@ -65,8 +65,9 @@ namespace lab2
             foreach (storeInventory item in inventory)
             {
                 lblDisplay.Text += item.ToString();
-                lblDisplay.Text += $"{StoreInventory[3]}";
-                lblDisplay.Text += $"{StoreInventory[1]}";
+
+                lblDisplay.Text += $"{StoreInventory[3]}\n";
+                lblDisplay.Text += $"{StoreInventory[1]}\n";
 
                 lblDisplay.Text += $"{StoreInventory[04].ToString()}";
                 lblDisplay.Text += $"{StoreInventory[02].ToString()}";
