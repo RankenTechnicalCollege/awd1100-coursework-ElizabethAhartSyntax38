@@ -7,10 +7,10 @@ namespace Lab1
         List<FlashCard> myDefinitions = new List<FlashCard>()
         {
         new FlashCard("VARIABLE","A VARIABLE is a named memory location","trending Safety O.sha year 08"),
-        new FlashCard("JERSEY","a wearable uniform in the Athletic field with Breathable allowance","Usually A-Top year 72 for Shorts"),
-        new FlashCard("HAND","The Part of the body connected to the wrist with fingers attached","American History Medicine B.C"),
-        new FlashCard("INTEGRITY","the quality of being honest and having strong moral principles; moral uprightness:","a gentleman of complete integrity"),
-        new FlashCard("INNOVATION","a new method, idea, product,the action or process of innovating etc.:","innovation is crucial to the continuing"),
+        new FlashCard("JERSEY","JERSEY:A WEARABLE UNIFORM IN THE ATLETIC FEILD with Breathable allowance","Usually A-Top year 72 for Shorts"),
+        new FlashCard("HAND","THE PART OF THE BODY connected to the wrist with fingers attached","American History Medicine B.C"),
+        new FlashCard("INTEGRITY","THE QUALITY OF BEING HONEST and having strong moral principles; moral uprightness:","a gentleman of complete integrity"),
+        new FlashCard("INNOVATION","A NEW METHOD, idea, product,the action or process of innovating etc.:","innovation is crucial to the continuing"),
         };
 
 
@@ -51,7 +51,6 @@ namespace Lab1
 
 
                 if (myDefinitions[i].Name.ToLower().Contains(userSearchValue))
-
                 {
                     foundFlashCard = true;
                     lblDisplay2.Visible = false;
