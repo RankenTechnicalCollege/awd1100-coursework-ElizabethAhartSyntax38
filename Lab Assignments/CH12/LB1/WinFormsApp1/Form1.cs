@@ -8,7 +8,7 @@ namespace WinFormsApp1
         {
             InitializeComponent();
         }
-        string[] ChampionNames = new string[] { "Ruckus", "Makoa", "Drogoz", "Tyra", "Grover", "Evie" };
+        string [] ChampionNames = new string[] { "Ruckus", "Makoa", "Drogoz", "Tyra", "Grover", "Evie" };
         string[] LeftMouse = new string[] { "Miniguns", "Cannon", "Rocket", " Launcher", "Auto Rifle", "Throwing Axe", "Ice Staff" };
         Champion_Type[] TYPE = new Champion_Type[] { Champion_Type.FRONT_LINE, Champion_Type.FRONT_LINE, Champion_Type.DAMAGE, Champion_Type.DAMAGE, Champion_Type.SUPPORT, Champion_Type.FLANK };
         string[] RightMouse = new string[] { "Missile Launcher", "Dredge Anchor", "Fire Spit", "Nade Launcher", "Crippling Throw", "Ice Block" };
@@ -21,10 +21,11 @@ namespace WinFormsApp1
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string UserInput = txtSearch.Text;
+            
             for (int i = 0; i < ChampionNames.Length; i++)
             {
                 if (UserInput.ToLower().Contains(ChampionNames[i].ToLower()))
-                {
+                {                   
                     rchDisplay.Text = ChampionNames[i];
 
                     rchDisplay.Text += TYPE[i]+"\n";
@@ -35,7 +36,7 @@ namespace WinFormsApp1
                     rchDisplay.Text += "****_________________***";
                     rchDisplay.Text += F[i] + "\n";
                     rchDisplay.Text += E[i] + "\n";
-                   
+                    Champion_Type champion_Type = new Champion_Type();
                     break;
                 }
                 else

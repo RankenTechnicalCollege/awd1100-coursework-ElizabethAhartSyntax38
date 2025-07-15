@@ -21,7 +21,12 @@ namespace LB2
             ROOMS room = Room;
             return$"{groupName} {room} {date.ToShortDateString()}  {attendees}\n";
         }
-      
+
+        internal static string Display(Conference newConference)
+        {
+            throw new NotImplementedException();
+        }
+
         public int Attendees {  get { return _attendees; } set { _attendees = value; }}
         public ROOMS Room { get { return _rooms; } set { _rooms = value; }}
         public string GroupName { get { return _groupName; } set {_groupName = value; }}

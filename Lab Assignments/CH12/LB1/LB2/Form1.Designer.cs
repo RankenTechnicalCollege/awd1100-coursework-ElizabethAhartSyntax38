@@ -144,11 +144,11 @@
             // 
             // lblDisplayGroup
             // 
-            lblDisplayGroup.Font = new Font("Segoe UI", 11F);
+            lblDisplayGroup.Font = new Font("Segoe UI", 10F);
             lblDisplayGroup.ForeColor = Color.CornflowerBlue;
             lblDisplayGroup.Location = new Point(12, 86);
             lblDisplayGroup.Name = "lblDisplayGroup";
-            lblDisplayGroup.Size = new Size(532, 75);
+            lblDisplayGroup.Size = new Size(542, 95);
             lblDisplayGroup.TabIndex = 14;
             lblDisplayGroup.Text = "_";
             // 

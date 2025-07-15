@@ -1,3 +1,5 @@
+using System.Reflection.Metadata.Ecma335;
+
 namespace LB2
 {
     public partial class Form1 : Form
@@ -23,10 +25,13 @@ namespace LB2
             };
             if (conferenceCount < 20)
             {
+               
                 conferences.Add(newConference);
                 conferenceCount++;
-                lblDisplayGroup.Text = $"{conferenceCount}/20\n ";               
+                lblDisplayGroup.Text = $"{conferenceCount}/20\n ";
+                lblDisplayGroup.Text += $"Validation For your Selected Amount, {txtAttendees.Text} ,Attendees will Include\n";
                 lblDisplayGroup.Text += $"ROOMS AVAILIABLE";
+               
             }
             else
             {
