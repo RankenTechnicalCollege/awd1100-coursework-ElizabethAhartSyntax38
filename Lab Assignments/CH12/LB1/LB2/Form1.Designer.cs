@@ -38,12 +38,12 @@
             txtRoom = new TextBox();
             lblBegin = new Label();
             lblEnd = new Label();
-            lblSearch = new Label();
             txtBegin = new TextBox();
             txtEnd = new TextBox();
-            txtSearch = new TextBox();
             lblDisplayGroup = new Label();
             lblDisplaySearch = new Label();
+            btnADD = new Button();
+            btnSearch = new Button();
             SuspendLayout();
             // 
             // lblGroup
@@ -81,7 +81,6 @@
             lblRoom.Size = new Size(49, 20);
             lblRoom.TabIndex = 3;
             lblRoom.Text = "Room";
-            lblRoom.Click += lblRoom_Click;
             // 
             // txtGroupName
             // 
@@ -129,15 +128,6 @@
             lblEnd.TabIndex = 9;
             lblEnd.Text = "END";
             // 
-            // lblSearch
-            // 
-            lblSearch.AutoSize = true;
-            lblSearch.Location = new Point(472, 181);
-            lblSearch.Name = "lblSearch";
-            lblSearch.Size = new Size(53, 20);
-            lblSearch.TabIndex = 10;
-            lblSearch.Text = "Search";
-            // 
             // txtBegin
             // 
             txtBegin.Location = new Point(57, 204);
@@ -152,40 +142,57 @@
             txtEnd.Size = new Size(125, 27);
             txtEnd.TabIndex = 12;
             // 
-            // txtSearch
-            // 
-            txtSearch.Location = new Point(437, 204);
-            txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(125, 27);
-            txtSearch.TabIndex = 13;
-            // 
             // lblDisplayGroup
             // 
+            lblDisplayGroup.Font = new Font("Segoe UI", 11F);
+            lblDisplayGroup.ForeColor = Color.CornflowerBlue;
             lblDisplayGroup.Location = new Point(12, 86);
             lblDisplayGroup.Name = "lblDisplayGroup";
-            lblDisplayGroup.Size = new Size(523, 58);
+            lblDisplayGroup.Size = new Size(532, 75);
             lblDisplayGroup.TabIndex = 14;
             lblDisplayGroup.Text = "_";
             // 
             // lblDisplaySearch
             // 
+            lblDisplaySearch.Font = new Font("Segoe UI", 11F);
+            lblDisplaySearch.ForeColor = Color.CornflowerBlue;
             lblDisplaySearch.Location = new Point(12, 259);
             lblDisplaySearch.Name = "lblDisplaySearch";
-            lblDisplaySearch.Size = new Size(523, 58);
+            lblDisplaySearch.Size = new Size(563, 167);
             lblDisplaySearch.TabIndex = 15;
             lblDisplaySearch.Text = "_";
+            // 
+            // btnADD
+            // 
+            btnADD.Location = new Point(647, 34);
+            btnADD.Name = "btnADD";
+            btnADD.Size = new Size(123, 39);
+            btnADD.TabIndex = 16;
+            btnADD.Text = "ADD";
+            btnADD.UseVisualStyleBackColor = true;
+            btnADD.Click += btnADD_Click;
+            // 
+            // btnSearch
+            // 
+            btnSearch.Location = new Point(634, 259);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(154, 54);
+            btnSearch.TabIndex = 17;
+            btnSearch.Text = "SEARCH";
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSearch);
+            Controls.Add(btnADD);
             Controls.Add(lblDisplaySearch);
             Controls.Add(lblDisplayGroup);
-            Controls.Add(txtSearch);
             Controls.Add(txtEnd);
             Controls.Add(txtBegin);
-            Controls.Add(lblSearch);
             Controls.Add(lblEnd);
             Controls.Add(lblBegin);
             Controls.Add(txtRoom);
@@ -214,11 +221,11 @@
         private TextBox txtRoom;
         private Label lblBegin;
         private Label lblEnd;
-        private Label lblSearch;
         private TextBox txtBegin;
         private TextBox txtEnd;
-        private TextBox txtSearch;
         private Label lblDisplayGroup;
         private Label lblDisplaySearch;
+        private Button btnADD;
+        private Button btnSearch;
     }
 }

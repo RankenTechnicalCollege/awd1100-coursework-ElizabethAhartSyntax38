@@ -48,6 +48,7 @@
             btnSearch.TabIndex = 1;
             btnSearch.Text = "SEARCH";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // rchDisplay
             // 

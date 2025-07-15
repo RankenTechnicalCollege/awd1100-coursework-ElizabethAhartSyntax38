@@ -9,10 +9,11 @@ namespace LB1
     public class Order
     {
         private string _name;
-        private  sundae _sundae;
+        private sundae _sundae;
         private Soda _soda;
         public string Name=>_name;
         public Soda Soda => _soda;
+        public sundae sundae => _sundae;
 
         //public SundaeToppings Sundae => _sundae;
 
@@ -20,7 +21,21 @@ namespace LB1
         {
             get
             {
-                return ((double)_sundae.Price) + (double)_soda.Price;
+                double price = 0;
+                if (_soda == null)
+                {
+                    price = _sundae.Price;
+                }
+                else if (_sundae == null)
+                {
+                    price = _soda.Price;
+                }
+                else
+                {
+                    price = _sundae.Price + _soda.Price;
+
+                }
+                return price;
             }
            
         }
@@ -36,7 +51,7 @@ namespace LB1
                 _soda = new Soda();
             }
         }
-           public sundae sundae => _sundae;
+          
         
 
 

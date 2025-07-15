@@ -11,22 +11,19 @@ namespace LB2
         string _groupName;
         DateTime _startDate;
         int _attendees = 0;
+        public ROOMS _rooms;
         
         public string Display()
         {
-            return$"{_groupName} {_startDate} {Room} {_attendees}";
+            int attendees = Attendees;
+            DateTime date = StartDate;
+            string groupName = GroupName;
+            ROOMS room = Room;
+            return$"{groupName} {room} {date.ToShortDateString()}  {attendees}\n";
         }
-        public Conference()
-        {
-            _groupName = _groupName;
-            _startDate = new DateTime(int.MinValue);
-            
-            int _attendees = 0;
-           string[] Room = new string[20];
-
-        }
+      
         public int Attendees {  get { return _attendees; } set { _attendees = value; }}
-        public string[] Room { get { return Room; } set { Room = value; }}
+        public ROOMS Room { get { return _rooms; } set { _rooms = value; }}
         public string GroupName { get { return _groupName; } set {_groupName = value; }}
         public DateTime StartDate { get { return _startDate; } set { _startDate = value; }}
         

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LB1
 {
-   
+
     public class Soda
     {
         public const double Base_Price = 1.75;
@@ -17,7 +17,7 @@ namespace LB1
         {
             get { return _Flavor; }
         }
-        public double Price=> Price;
+        public double Price { get { return _Price; } }
         public Soda()
         {
             _Flavor = sodaFlavor.NONE;
@@ -26,6 +26,7 @@ namespace LB1
         public void AddFlavor(sodaFlavor f)
         {
             _Flavor = f;
+            _Price += Flavor_Price;
         }
        
     }

@@ -244,6 +244,7 @@
             // 
             // rchTxtBox
             // 
+            rchTxtBox.Font = new Font("Segoe UI", 12F);
             rchTxtBox.Location = new Point(527, 23);
             rchTxtBox.Name = "rchTxtBox";
             rchTxtBox.Size = new Size(245, 362);

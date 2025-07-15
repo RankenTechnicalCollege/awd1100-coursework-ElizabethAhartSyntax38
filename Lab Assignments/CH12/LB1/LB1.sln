@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LB1", "LB1\LB1.csproj", "{C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LB2", "LB2\LB2.csproj", "{470ED6B6-E713-463B-B021-FA755B610AD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{FCBFA6DD-9722-40F4-B525-790678D29F0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LB3", "WinFormsApp1\LB3.csproj", "{FCBFA6DD-9722-40F4-B525-790678D29F0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
