@@ -9,29 +9,34 @@ namespace Ex1
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            if (txtName == null || txtAmount == null)
+                string Name=txtName.Text;
+                 int loanAmount=Convert.ToInt32(txtAmount.Text);
+            double balance = loanAmount;
+
+            for (int i = 0; i < 75; i++)
+
+                if (Name == "" || loanAmount < 0 )
             {
-                lblDisplay.Text = "INVALID LOAN REFERENCE";
+                lblDisplayAmount.Text = "INVALID LOAN REFERENCE";
+                
             }
-            else if (txtAmount.Text != null && chkShort.Checked|| txtName.Text != null&&chkLONG.Checked)
+            else if (Name !=null && chkShort.Checked|| loanAmount >=0 &&chkLONG.Checked)
             {
                 grpManage.Visible = true;
-                string CreateLoanShort(string name, int amount)
-                {
-
-                    short myLoan = new short();
-                    lblDisplay.Text = $"{new short()}";
-                    return $"{Name,10000}";
-                }
+                
+                     short myLoan = new short();
+                     lblDisplay.Text = $"{new short()}";
+                     List<short> list = new List<short>(20);
+                
             }
-            else if (txtAmount.Text != null && chkLONG.Checked||  txtName.Text != null&&chkShort.Checked)
+            else if (Name != null && chkLONG.Checked|| loanAmount > 0 &&chkShort.Checked)
             {
-                string CreateLong(string name, int amount)
-                {
-                    LongTerm myLoan = new LongTerm();
-                    lblDisplay.Text = $"{new LongTerm()}";
-                    return $"{name} {amount}";
-                }
+                
+                     LongTerm myLoan = new LongTerm();
+                     List <LongTerm> list = new List<LongTerm>(20);
+                     lblDisplay.Text = $"{new LongTerm()}";
+                   
+                
             }
 
         }

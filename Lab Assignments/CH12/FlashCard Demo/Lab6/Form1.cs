@@ -24,7 +24,7 @@ namespace Lab6
             int area = Convert.ToInt32(length*width);
             string name=txtName.Text;
             int boxes=(area/12)+2;
-           lblDisplay.Text = $"{area} is this many {boxes} Boxes";
+           lblDisplay.Text = $"your area of {area} is this many {boxes} Boxes";
            lblDisplay.Text+= Display() ;
 
 
