@@ -23,6 +23,8 @@ namespace Ex1
             else if (Name !=null && chkShort.Checked|| loanAmount >=0 &&chkLONG.Checked)
             {
                 grpManage.Visible = true;
+                    lblDisplayName.Text=$"{Name} and {loanAmount}";
+                    lblDisplayLoan.Text = loanAmount.ToString();
                 
                      short myLoan = new short();
                      lblDisplay.Text = $"{new short()}";
