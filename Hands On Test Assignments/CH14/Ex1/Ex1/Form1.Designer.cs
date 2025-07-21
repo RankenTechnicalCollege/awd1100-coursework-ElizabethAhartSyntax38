@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             grpCreate = new GroupBox();
-            lblName = new Label();
-            lblAmount = new Label();
-            lblType = new Label();
-            txtName = new TextBox();
-            txtAmount = new TextBox();
-            chkShort = new CheckBox();
-            chkLONG = new CheckBox();
             btnCreate = new Button();
+            chkLONG = new CheckBox();
+            chkShort = new CheckBox();
+            txtAmount = new TextBox();
+            txtName = new TextBox();
+            lblType = new Label();
+            lblAmount = new Label();
+            lblName = new Label();
             grpManage = new GroupBox();
             btnPay = new Button();
             lblDisplay = new Label();
@@ -64,56 +64,16 @@
             grpCreate.TabStop = false;
             grpCreate.Text = "CREATE LOAN";
             // 
-            // lblName
+            // btnCreate
             // 
-            lblName.AutoSize = true;
-            lblName.Location = new Point(6, 23);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(62, 20);
-            lblName.TabIndex = 0;
-            lblName.Text = "NAME : ";
-            // 
-            // lblAmount
-            // 
-            lblAmount.AutoSize = true;
-            lblAmount.Location = new Point(6, 55);
-            lblAmount.Name = "lblAmount";
-            lblAmount.Size = new Size(83, 20);
-            lblAmount.TabIndex = 1;
-            lblAmount.Text = "AMOUNT : ";
-            // 
-            // lblType
-            // 
-            lblType.AutoSize = true;
-            lblType.Location = new Point(6, 84);
-            lblType.Name = "lblType";
-            lblType.Size = new Size(103, 20);
-            lblType.TabIndex = 2;
-            lblType.Text = "TYPE Of LOAN";
-            // 
-            // txtName
-            // 
-            txtName.Location = new Point(101, 21);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(125, 27);
-            txtName.TabIndex = 3;
-            // 
-            // txtAmount
-            // 
-            txtAmount.Location = new Point(101, 54);
-            txtAmount.Name = "txtAmount";
-            txtAmount.Size = new Size(125, 27);
-            txtAmount.TabIndex = 4;
-            // 
-            // chkShort
-            // 
-            chkShort.AutoSize = true;
-            chkShort.Location = new Point(8, 107);
-            chkShort.Name = "chkShort";
-            chkShort.Size = new Size(119, 24);
-            chkShort.TabIndex = 5;
-            chkShort.Text = "SHORT TERM";
-            chkShort.UseVisualStyleBackColor = true;
+            btnCreate.Font = new Font("Segoe UI", 8.5F);
+            btnCreate.Location = new Point(199, 111);
+            btnCreate.Name = "btnCreate";
+            btnCreate.Size = new Size(113, 49);
+            btnCreate.TabIndex = 7;
+            btnCreate.Text = "CREATE LOAN";
+            btnCreate.UseVisualStyleBackColor = true;
+            btnCreate.Click += btnCreate_Click;
             // 
             // chkLONG
             // 
@@ -125,16 +85,56 @@
             chkLONG.Text = "LONG TERM";
             chkLONG.UseVisualStyleBackColor = true;
             // 
-            // btnCreate
+            // chkShort
             // 
-            btnCreate.Font = new Font("Segoe UI", 8.5F);
-            btnCreate.Location = new Point(199, 111);
-            btnCreate.Name = "btnCreate";
-            btnCreate.Size = new Size(113, 49);
-            btnCreate.TabIndex = 7;
-            btnCreate.Text = "CREATE LOAN";
-            btnCreate.UseVisualStyleBackColor = true;
-            btnCreate.Click += btnCreate_Click;
+            chkShort.AutoSize = true;
+            chkShort.Location = new Point(8, 107);
+            chkShort.Name = "chkShort";
+            chkShort.Size = new Size(119, 24);
+            chkShort.TabIndex = 5;
+            chkShort.Text = "SHORT TERM";
+            chkShort.UseVisualStyleBackColor = true;
+            // 
+            // txtAmount
+            // 
+            txtAmount.Location = new Point(101, 54);
+            txtAmount.Name = "txtAmount";
+            txtAmount.Size = new Size(125, 27);
+            txtAmount.TabIndex = 4;
+            // 
+            // txtName
+            // 
+            txtName.Location = new Point(101, 21);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(125, 27);
+            txtName.TabIndex = 3;
+            // 
+            // lblType
+            // 
+            lblType.AutoSize = true;
+            lblType.Location = new Point(6, 84);
+            lblType.Name = "lblType";
+            lblType.Size = new Size(103, 20);
+            lblType.TabIndex = 2;
+            lblType.Text = "TYPE Of LOAN";
+            // 
+            // lblAmount
+            // 
+            lblAmount.AutoSize = true;
+            lblAmount.Location = new Point(6, 55);
+            lblAmount.Name = "lblAmount";
+            lblAmount.Size = new Size(83, 20);
+            lblAmount.TabIndex = 1;
+            lblAmount.Text = "AMOUNT : ";
+            // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.Location = new Point(6, 23);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(62, 20);
+            lblName.TabIndex = 0;
+            lblName.Text = "NAME : ";
             // 
             // grpManage
             // 
@@ -159,6 +159,7 @@
             btnPay.TabIndex = 15;
             btnPay.Text = "MAKE PAYMENT";
             btnPay.UseVisualStyleBackColor = true;
+            btnPay.Click += btnPay_Click;
             // 
             // lblDisplay
             // 
