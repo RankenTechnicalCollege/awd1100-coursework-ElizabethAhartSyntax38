@@ -9,24 +9,33 @@ namespace Lab1
     public class Letter:System.Object
     {
         private string _recipient;
-        private DateOnly _sendDate;
+        private DateTime _sendDate;
         private double _price;
+        private double _trackingNumber;
         
         public string? Recipient {  get; }=null;
-        public DateOnly SendDate { get; }
+        public DateTime SendDate { get; }
+        public double TrackingNumber { get; } 
+       
         public virtual double Price {  get;}
         public Letter(string recipient, DateOnly sendDate, double price)
         {
             Recipient = _recipient;
             SendDate = _sendDate;
             Price = _price;
+            TrackingNumber = _trackingNumber;
             if(recipient!= null && SendDate != null)
             {
                 _price = .50;
                 
-            }else if (recipient== null|| sendDate==null)
+            }else if (recipient== null|| sendDate==null&& TrackingNumber!=null )
             {
-                return;
+                _price= .50+.15;
+
+            }
+            else
+            {
+                _price = 0;
             }
            
         }

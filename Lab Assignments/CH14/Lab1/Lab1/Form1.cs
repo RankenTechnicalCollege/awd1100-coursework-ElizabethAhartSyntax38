@@ -16,6 +16,7 @@ namespace Lab1
             if (txtRecipient != null && txtSent != null)
             {
 
+               DateTime SentDate = DateTime.Parse(txtSent.Text);
                 Letter L1 = new Letter(txtRecipient.Text, DateOnly.MaxValue, 50);
                 Letter[] Letter = new Letter[20];
                 rTxtDisplay.Text = $"{L1}\n";
