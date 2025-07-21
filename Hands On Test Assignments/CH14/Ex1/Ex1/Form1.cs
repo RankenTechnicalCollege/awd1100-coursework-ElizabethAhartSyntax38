@@ -65,7 +65,7 @@ namespace Ex1
                 double Newbalance = balance - Payment;
                 lblDisplayLoan.Text += $"{Newbalance.ToString():c}\n";
                 lblDisplayLoan.Text += $"After payment you Owe * {Newbalance.ToString():c}\n";
-               
+
             }
             else if (chkLONG.Checked)
             {
@@ -76,13 +76,13 @@ namespace Ex1
                 double Newbalance2 = Payment2;
                 lblDisplayLoan.Text += $"{Newbalance2.ToString():c}\n";
                 lblDisplayLoan.Text += $"After payment you Owe * {Newbalance2.ToString():c}\n";
-               
 
+
+
+
+            }
+        }
             
-
-
-                    }
-                }
             
 
 
@@ -117,9 +117,11 @@ namespace Ex1
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-           
+
+             MakePayment();
+            ApplyInterest();
+                  
             
-                  MakePayment();
                
 
               
