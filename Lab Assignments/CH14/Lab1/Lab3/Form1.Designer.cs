@@ -38,7 +38,7 @@
             pcBox8 = new PictureBox();
             pcBox9 = new PictureBox();
             pcBox7 = new PictureBox();
-            pcbox10 = new PictureBox();
+            pcBox10 = new PictureBox();
             pcBox6 = new PictureBox();
             lblCharmander1 = new Label();
             lblFloragato2 = new Label();
@@ -58,7 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)pcBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pcbox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcBox6).BeginInit();
             SuspendLayout();
             // 
@@ -192,20 +192,20 @@
             pcBox7.TabStop = false;
             pcBox7.Visible = false;
             // 
-            // pcbox10
+            // pcBox10
             // 
-            pcbox10.BackColor = Color.Pink;
-            pcbox10.BorderStyle = BorderStyle.FixedSingle;
-            pcbox10.ErrorImage = (Image)resources.GetObject("pcbox10.ErrorImage");
-            pcbox10.Image = (Image)resources.GetObject("pcbox10.Image");
-            pcbox10.InitialImage = (Image)resources.GetObject("pcbox10.InitialImage");
-            pcbox10.Location = new Point(585, 215);
-            pcbox10.Name = "pcbox10";
-            pcbox10.Size = new Size(148, 148);
-            pcbox10.SizeMode = PictureBoxSizeMode.Zoom;
-            pcbox10.TabIndex = 8;
-            pcbox10.TabStop = false;
-            pcbox10.Visible = false;
+            pcBox10.BackColor = Color.Pink;
+            pcBox10.BorderStyle = BorderStyle.FixedSingle;
+            pcBox10.ErrorImage = (Image)resources.GetObject("pcBox10.ErrorImage");
+            pcBox10.Image = (Image)resources.GetObject("pcBox10.Image");
+            pcBox10.InitialImage = (Image)resources.GetObject("pcBox10.InitialImage");
+            pcBox10.Location = new Point(585, 215);
+            pcBox10.Name = "pcBox10";
+            pcBox10.Size = new Size(148, 148);
+            pcBox10.SizeMode = PictureBoxSizeMode.Zoom;
+            pcBox10.TabIndex = 8;
+            pcBox10.TabStop = false;
+            pcBox10.Visible = false;
             // 
             // pcBox6
             // 
@@ -350,7 +350,7 @@
             Controls.Add(pcBox8);
             Controls.Add(pcBox9);
             Controls.Add(pcBox7);
-            Controls.Add(pcbox10);
+            Controls.Add(pcBox10);
             Controls.Add(pcBox6);
             Controls.Add(pcBox3);
             Controls.Add(pcBox4);
@@ -370,7 +370,7 @@
             ((System.ComponentModel.ISupportInitialize)pcBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pcbox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -386,7 +386,7 @@
         private PictureBox pcBox8;
         private PictureBox pcBox9;
         private PictureBox pcBox7;
-        private PictureBox pcbox10;
+        private PictureBox pcBox10;
         private PictureBox pcBox6;
         private Label lblCharmander1;
         private Label lblFloragato2;

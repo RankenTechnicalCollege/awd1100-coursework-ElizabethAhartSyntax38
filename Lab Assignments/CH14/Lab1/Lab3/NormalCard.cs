@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab3
 {
-    public class NormalCard
+    public class NormalCard 
     {
         private string _name;
         private Image _image;
