@@ -12,7 +12,7 @@ namespace Lab3
             int randomNum = numGenerator.Next(1,10);
 
         }
-
+        List<NormalCard> POKECARD = new List<NormalCard>(10);
         private void pcBox8_Click(object sender, EventArgs e)
         {
 
@@ -25,11 +25,13 @@ namespace Lab3
             {
                 Random numGenerator = new Random();
                 int randomNum = numGenerator.Next(0,100);
+               
 
                 if (randomNum ==0)
                 {
                     pcBox1.Visible = true;
                     lblCharmander1.Visible = true;
+                    POKECARD.Add(new NormalCard(lblCharmander1.Text, pcBox1.Image, 1));
                     break;
                   
                 }
@@ -37,24 +39,28 @@ namespace Lab3
                 {
                     pcBox2.Visible = true;
                     lblFloragato2.Visible = true;
+                    POKECARD.Add(new NormalCard(lblFloragato2.Text, pcBox2.Image, 2));
                     break;
                 }
                 else if (randomNum == 2)
                 {
                     pcBox3.Visible = true;
                     lblJolten3.Visible = true;
+                    POKECARD.Add(new NormalCard(lblJolten3.Text, pcBox3.Image, 3));
                     break;
                 }
                 else if (randomNum == 3)
                 {
-                    pcbox4.Visible = true;
+                    pcBox4.Visible = true;
                     lblIron4.Visible = true;
+                    POKECARD.Add(new NormalCard(lblIron4.Text, pcBox4.Image, 4));
                     break;
                 }
                 else if (randomNum ==4)
                 {
                     pcBox5.Visible = true;
                     lblCharzard5.Visible = true;
+                    POKECARD.Add(new NormalCard(lblCharmander1.Text, pcBox5.Image, 5));
                     break;
                 }
                 else if (randomNum == 5)
@@ -95,7 +101,7 @@ namespace Lab3
                     pcBox1.Visible = false;
                     pcBox2.Visible = false;
                     pcBox3.Visible = false;
-                    pcbox4.Visible = false;
+                    pcBox4.Visible = false;
                     pcBox5.Visible = false;
                     pcBox6.Visible = false;
                     pcBox7.Visible = false;

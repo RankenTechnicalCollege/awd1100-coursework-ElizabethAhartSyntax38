@@ -33,7 +33,7 @@
             pcBox1 = new PictureBox();
             pcBox5 = new PictureBox();
             pcBox2 = new PictureBox();
-            pcbox4 = new PictureBox();
+            pcBox4 = new PictureBox();
             pcBox3 = new PictureBox();
             pcBox8 = new PictureBox();
             pcBox9 = new PictureBox();
@@ -53,7 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)pcBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pcbox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcBox9).BeginInit();
@@ -116,20 +116,20 @@
             pcBox2.TabStop = false;
             pcBox2.Visible = false;
             // 
-            // pcbox4
+            // pcBox4
             // 
-            pcbox4.BackColor = Color.Pink;
-            pcbox4.BorderStyle = BorderStyle.FixedSingle;
-            pcbox4.ErrorImage = (Image)resources.GetObject("pcbox4.ErrorImage");
-            pcbox4.Image = (Image)resources.GetObject("pcbox4.Image");
-            pcbox4.InitialImage = (Image)resources.GetObject("pcbox4.InitialImage");
-            pcbox4.Location = new Point(442, 3);
-            pcbox4.Name = "pcbox4";
-            pcbox4.Size = new Size(137, 206);
-            pcbox4.SizeMode = PictureBoxSizeMode.CenterImage;
-            pcbox4.TabIndex = 5;
-            pcbox4.TabStop = false;
-            pcbox4.Visible = false;
+            pcBox4.BackColor = Color.Pink;
+            pcBox4.BorderStyle = BorderStyle.FixedSingle;
+            pcBox4.ErrorImage = (Image)resources.GetObject("pcBox4.ErrorImage");
+            pcBox4.Image = (Image)resources.GetObject("pcBox4.Image");
+            pcBox4.InitialImage = (Image)resources.GetObject("pcBox4.InitialImage");
+            pcBox4.Location = new Point(442, 3);
+            pcBox4.Name = "pcBox4";
+            pcBox4.Size = new Size(137, 206);
+            pcBox4.SizeMode = PictureBoxSizeMode.CenterImage;
+            pcBox4.TabIndex = 5;
+            pcBox4.TabStop = false;
+            pcBox4.Visible = false;
             // 
             // pcBox3
             // 
@@ -353,7 +353,7 @@
             Controls.Add(pcbox10);
             Controls.Add(pcBox6);
             Controls.Add(pcBox3);
-            Controls.Add(pcbox4);
+            Controls.Add(pcBox4);
             Controls.Add(pcBox2);
             Controls.Add(pcBox5);
             Controls.Add(pcBox1);
@@ -365,7 +365,7 @@
             ((System.ComponentModel.ISupportInitialize)pcBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pcbox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcBox9).EndInit();
@@ -381,7 +381,7 @@
         private PictureBox pcBox1;
         private PictureBox pcBox5;
         private PictureBox pcBox2;
-        private PictureBox pcbox4;
+        private PictureBox pcBox4;
         private PictureBox pcBox3;
         private PictureBox pcBox8;
         private PictureBox pcBox9;
