@@ -6,32 +6,33 @@ using System.Threading.Tasks;
 
 namespace Lab2
 {
-    internal class Photo:System.Object
+    public class Photo
     {
-        private float _Width;
-        private float _Height;
-        private float _price;
+        protected float _Width;
+        protected float _Height;
+
+       
         public Photo(float Width, float Height)
         {
             _Width = Width;
             _Height = Height;
-            if (Width <= 8 && Height <= 10)
+            if (Width == 8 && Height == 10)
             {
-                _price = 3.99f;
+                Price = 3.99f;
             }
-            else if (Width <= 10 && Height <= 12)
+            else if (Width == 10 && Height == 12)
             {
-                _price = 5.99f;
+                Price = 5.99f;
             }
             else
             {
-                _price = 9.99f;
+                Price = 9.99f;
             }
         
         }
         public float Width { get { return _Width; }set { _Width = value; } }
         public float Height { get { return _Height; }set { _Height = value; } }
-     public virtual float Price { get { return _price; }set {_price = value; } }
+     public virtual float Price { get; }
         public override string ToString()
         {
             return$"The {GetType()} has a Dimension of {Width} and {Height}and a Price of {Price:c}";

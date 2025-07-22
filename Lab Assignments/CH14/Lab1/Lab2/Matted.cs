@@ -9,28 +9,25 @@ namespace Lab2
 {
 
 
-    public class Matted:Photo 
+    public class Matted : Photo
     {
-        private float _Width;
-        private float _Height;
-        private float _price;
+      protected Color _color;
+        public override float Price { get { return base.Price+10; } }
 
-        public float Price { get { return _price; } }
-
-        public Matted(float Width, float Height, string Color, float Price) : base(Width, Height)
+        public Matted(float Width, float Height, Color color) : base(Width, Height)
         {
            
-            Width = Width;
-            Height = Height;
-            Color = Color;
-            float _price = base.Price + 10;
+            
+            _color = color;
+          
         }
-        public string Color { get; set; }
+       
         public override string ToString()
         {  
             return base.ToString()+$"And a Color of {Color}";
         }
-        
+        public Color Color { get { return _color; } set{ _color = value; } }
+
     }
     
 }

@@ -8,42 +8,27 @@ namespace Lab1
 {
     public class Letter:System.Object
     {
-        private string _recipient;
-        private DateTime _sendDate;
-        private double _price;
-        private double _trackingNumber;
+       protected string _recipient;
+       protected DateTime _sendDate;
         
-        public string? Recipient {  get; }=null;
-        public DateTime SendDate { get; }
-        public double TrackingNumber { get; } 
-       
-        public virtual double Price {  get;}
-        public Letter(string recipient, DateOnly sendDate, double price)
-        {
-            Recipient = _recipient;
-            SendDate = _sendDate;
-            Price = _price;
-            TrackingNumber = _trackingNumber;
-            if(recipient!= null && SendDate != null)
-            {
-                _price = .50;
-                
-            }else if (recipient== null|| sendDate==null&& TrackingNumber!=null )
-            {
-                _price= .50+.15;
+        
+        public string Recipient { get { return _recipient; } }
+        public DateTime SendDate { get { return _sendDate; } }
 
-            }
-            else
-            {
-                _price = 0;
-            }
+
+        public virtual double Price { get; } = .5;
+        public Letter(string recipient, DateTime sendDate)
+        {
+            _recipient = recipient;
+            _sendDate = sendDate;
+           
            
         }
 
 
         public override string ToString()
         {
-            return $"The {GetType()}. a Recipient of {Recipient} and a Date mailed of {SendDate} with a Price of {Price:c}";
+            return $" a Recipient of {_recipient} and a Date mailed of {_sendDate} with a Price of {Price:c}\n";
         }
     }
 }

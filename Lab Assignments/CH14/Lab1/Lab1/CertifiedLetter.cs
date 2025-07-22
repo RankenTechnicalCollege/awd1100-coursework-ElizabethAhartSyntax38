@@ -9,19 +9,19 @@ namespace Lab1
   
     public class CertifiedLetter : Letter
     {
-        private string _trackingNumber;
+        protected string _trackingNumber;
         
         public string TackingNumber { get { return _trackingNumber; } }
-       
-        public string? TrackingNumber{ get; set; } = null;
+
+        public override double Price { get { return base.Price+.15; } }
         public override string ToString()
         {
-            return base.ToString() + $"{TrackingNumber} is the Set Tracking For This Letter";
-            ;
-        }  
-        public CertifiedLetter(string Recipient, DateOnly sendDate,double Price):base( Recipient,sendDate, Price)
-        {
+            return base.ToString() + $"{_trackingNumber} is the Set Tracking For This Letter\n";
             
+        }  
+        public CertifiedLetter(string Recipient, DateTime sendDate,string trackingNumber):base( Recipient,sendDate)
+        {
+          _trackingNumber = trackingNumber;  
 
         }
 

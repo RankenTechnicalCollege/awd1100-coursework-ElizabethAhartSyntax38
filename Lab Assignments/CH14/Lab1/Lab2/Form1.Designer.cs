@@ -33,33 +33,33 @@
             txtWidth = new TextBox();
             txtHeight = new TextBox();
             grpBxFrame = new GroupBox();
-            chkUnFramed = new CheckBox();
-            chkMatted = new CheckBox();
-            chkFramed = new CheckBox();
-            groupBox1 = new GroupBox();
-            chkGreen = new CheckBox();
-            chkRed = new CheckBox();
-            chkBlack = new CheckBox();
-            chkWhite = new CheckBox();
-            chkBlue = new CheckBox();
+            RADIOFRAMFRAME = new RadioButton();
+            radioFrameMatt = new RadioButton();
+            radioFrameUn = new RadioButton();
+            grpColor = new GroupBox();
+            radioWhite = new RadioButton();
+            radioBlue = new RadioButton();
+            radioGreen = new RadioButton();
+            radioRed = new RadioButton();
+            radioBlack = new RadioButton();
             grpMaterial = new GroupBox();
-            chkSilver = new CheckBox();
-            chkGold = new CheckBox();
-            chkSteel = new CheckBox();
-            chkOak = new CheckBox();
-            chkPine = new CheckBox();
-            groupBox2 = new GroupBox();
-            chkVintage = new CheckBox();
-            chkElectric = new CheckBox();
-            chkAntique = new CheckBox();
-            chkModern = new CheckBox();
-            chkSimple = new CheckBox();
+            radioMatGold = new RadioButton();
+            radioMatSilver = new RadioButton();
+            radioMatSteel = new RadioButton();
+            radioMatOak = new RadioButton();
+            radioMatPine = new RadioButton();
+            grpStyle = new GroupBox();
+            radioStyELectic = new RadioButton();
+            radioStyVintage = new RadioButton();
+            radioStyAntique = new RadioButton();
+            radioStyMod = new RadioButton();
+            radioStySimple = new RadioButton();
             btnCalculate = new Button();
             lblDisplay = new Label();
             grpBxFrame.SuspendLayout();
-            groupBox1.SuspendLayout();
+            grpColor.SuspendLayout();
             grpMaterial.SuspendLayout();
-            groupBox2.SuspendLayout();
+            grpStyle.SuspendLayout();
             SuspendLayout();
             // 
             // lblWidth
@@ -96,9 +96,9 @@
             // 
             // grpBxFrame
             // 
-            grpBxFrame.Controls.Add(chkFramed);
-            grpBxFrame.Controls.Add(chkMatted);
-            grpBxFrame.Controls.Add(chkUnFramed);
+            grpBxFrame.Controls.Add(RADIOFRAMFRAME);
+            grpBxFrame.Controls.Add(radioFrameMatt);
+            grpBxFrame.Controls.Add(radioFrameUn);
             grpBxFrame.Font = new Font("Segoe UI", 11F);
             grpBxFrame.Location = new Point(12, 101);
             grpBxFrame.Name = "grpBxFrame";
@@ -107,115 +107,119 @@
             grpBxFrame.TabStop = false;
             grpBxFrame.Text = "FRAME YOUR PHOTO";
             // 
-            // chkUnFramed
+            // RADIOFRAMFRAME
             // 
-            chkUnFramed.AutoSize = true;
-            chkUnFramed.Location = new Point(6, 20);
-            chkUnFramed.Name = "chkUnFramed";
-            chkUnFramed.Size = new Size(133, 29);
-            chkUnFramed.TabIndex = 0;
-            chkUnFramed.Text = "UNFRAMED";
-            chkUnFramed.UseVisualStyleBackColor = true;
+            RADIOFRAMFRAME.AutoSize = true;
+            RADIOFRAMFRAME.Location = new Point(6, 85);
+            RADIOFRAMFRAME.Name = "RADIOFRAMFRAME";
+            RADIOFRAMFRAME.Size = new Size(105, 29);
+            RADIOFRAMFRAME.TabIndex = 11;
+            RADIOFRAMFRAME.Text = "FRAMED";
+            RADIOFRAMFRAME.UseVisualStyleBackColor = true;
+            RADIOFRAMFRAME.CheckedChanged += RADIOFRAMFRAME_CheckedChanged;
             // 
-            // chkMatted
+            // radioFrameMatt
             // 
-            chkMatted.AutoSize = true;
-            chkMatted.ForeColor = Color.Brown;
-            chkMatted.Location = new Point(6, 50);
-            chkMatted.Name = "chkMatted";
-            chkMatted.Size = new Size(105, 29);
-            chkMatted.TabIndex = 1;
-            chkMatted.Text = "MATTED";
-            chkMatted.UseVisualStyleBackColor = true;
+            radioFrameMatt.AutoSize = true;
+            radioFrameMatt.Location = new Point(6, 50);
+            radioFrameMatt.Name = "radioFrameMatt";
+            radioFrameMatt.Size = new Size(93, 29);
+            radioFrameMatt.TabIndex = 11;
+            radioFrameMatt.Text = "Matted";
+            radioFrameMatt.UseVisualStyleBackColor = true;
+            radioFrameMatt.CheckedChanged += radioFrameMatt_CheckedChanged;
             // 
-            // chkFramed
+            // radioFrameUn
             // 
-            chkFramed.AutoSize = true;
-            chkFramed.ForeColor = Color.Blue;
-            chkFramed.Location = new Point(6, 80);
-            chkFramed.Name = "chkFramed";
-            chkFramed.Size = new Size(106, 29);
-            chkFramed.TabIndex = 2;
-            chkFramed.Text = "FRAMED";
-            chkFramed.UseVisualStyleBackColor = true;
+            radioFrameUn.AutoSize = true;
+            radioFrameUn.Checked = true;
+            radioFrameUn.Location = new Point(6, 24);
+            radioFrameUn.Name = "radioFrameUn";
+            radioFrameUn.Size = new Size(132, 29);
+            radioFrameUn.TabIndex = 11;
+            radioFrameUn.TabStop = true;
+            radioFrameUn.Text = "UNFRAMED";
+            radioFrameUn.UseVisualStyleBackColor = true;
+            radioFrameUn.CheckedChanged += radioFrameUn_CheckedChanged;
             // 
-            // groupBox1
+            // grpColor
             // 
-            groupBox1.Controls.Add(chkBlue);
-            groupBox1.Controls.Add(chkWhite);
-            groupBox1.Controls.Add(chkGreen);
-            groupBox1.Controls.Add(chkRed);
-            groupBox1.Controls.Add(chkBlack);
-            groupBox1.Font = new Font("Segoe UI", 11F);
-            groupBox1.Location = new Point(18, 260);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(133, 193);
-            groupBox1.TabIndex = 5;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "COLOR";
-            groupBox1.Visible = false;
+            grpColor.Controls.Add(radioWhite);
+            grpColor.Controls.Add(radioBlue);
+            grpColor.Controls.Add(radioGreen);
+            grpColor.Controls.Add(radioRed);
+            grpColor.Controls.Add(radioBlack);
+            grpColor.Font = new Font("Segoe UI", 11F);
+            grpColor.Location = new Point(18, 260);
+            grpColor.Name = "grpColor";
+            grpColor.Size = new Size(133, 193);
+            grpColor.TabIndex = 5;
+            grpColor.TabStop = false;
+            grpColor.Text = "COLOR";
+            grpColor.Visible = false;
             // 
-            // chkGreen
+            // radioWhite
             // 
-            chkGreen.AutoSize = true;
-            chkGreen.ForeColor = Color.Green;
-            chkGreen.Location = new Point(6, 80);
-            chkGreen.Name = "chkGreen";
-            chkGreen.Size = new Size(92, 29);
-            chkGreen.TabIndex = 2;
-            chkGreen.Text = "GREEN";
-            chkGreen.UseVisualStyleBackColor = true;
+            radioWhite.AutoSize = true;
+            radioWhite.Location = new Point(6, 137);
+            radioWhite.Name = "radioWhite";
+            radioWhite.Size = new Size(83, 29);
+            radioWhite.TabIndex = 11;
+            radioWhite.Text = "White";
+            radioWhite.UseVisualStyleBackColor = true;
             // 
-            // chkRed
+            // radioBlue
             // 
-            chkRed.AutoSize = true;
-            chkRed.ForeColor = Color.Red;
-            chkRed.Location = new Point(6, 50);
-            chkRed.Name = "chkRed";
-            chkRed.Size = new Size(68, 29);
-            chkRed.TabIndex = 1;
-            chkRed.Text = "RED";
-            chkRed.UseVisualStyleBackColor = true;
+            radioBlue.AutoSize = true;
+            radioBlue.ForeColor = System.Drawing.Color.CornflowerBlue;
+            radioBlue.Location = new Point(6, 102);
+            radioBlue.Name = "radioBlue";
+            radioBlue.Size = new Size(76, 29);
+            radioBlue.TabIndex = 13;
+            radioBlue.Text = "BLUE";
+            radioBlue.UseVisualStyleBackColor = true;
             // 
-            // chkBlack
+            // radioGreen
             // 
-            chkBlack.AutoSize = true;
-            chkBlack.Location = new Point(6, 20);
-            chkBlack.Name = "chkBlack";
-            chkBlack.Size = new Size(90, 29);
-            chkBlack.TabIndex = 0;
-            chkBlack.Text = "BLACK";
-            chkBlack.UseVisualStyleBackColor = true;
+            radioGreen.AutoSize = true;
+            radioGreen.ForeColor = System.Drawing.Color.Green;
+            radioGreen.Location = new Point(6, 79);
+            radioGreen.Name = "radioGreen";
+            radioGreen.Size = new Size(84, 29);
+            radioGreen.TabIndex = 12;
+            radioGreen.Text = "Green";
+            radioGreen.UseVisualStyleBackColor = true;
             // 
-            // chkWhite
+            // radioRed
             // 
-            chkWhite.AutoSize = true;
-            chkWhite.ForeColor = Color.DarkTurquoise;
-            chkWhite.Location = new Point(6, 129);
-            chkWhite.Name = "chkWhite";
-            chkWhite.Size = new Size(90, 29);
-            chkWhite.TabIndex = 3;
-            chkWhite.Text = "WHITE";
-            chkWhite.UseVisualStyleBackColor = true;
+            radioRed.AutoSize = true;
+            radioRed.ForeColor = System.Drawing.Color.Red;
+            radioRed.Location = new Point(6, 49);
+            radioRed.Name = "radioRed";
+            radioRed.Size = new Size(67, 29);
+            radioRed.TabIndex = 11;
+            radioRed.Text = "RED";
+            radioRed.UseVisualStyleBackColor = true;
             // 
-            // chkBlue
+            // radioBlack
             // 
-            chkBlue.AutoSize = true;
-            chkBlue.ForeColor = Color.Blue;
-            chkBlue.Location = new Point(6, 104);
-            chkBlue.Name = "chkBlue";
-            chkBlue.Size = new Size(77, 29);
-            chkBlue.TabIndex = 4;
-            chkBlue.Text = "BLUE";
-            chkBlue.UseVisualStyleBackColor = true;
+            radioBlack.AutoSize = true;
+            radioBlack.Checked = true;
+            radioBlack.Location = new Point(6, 23);
+            radioBlack.Name = "radioBlack";
+            radioBlack.Size = new Size(77, 29);
+            radioBlack.TabIndex = 10;
+            radioBlack.TabStop = true;
+            radioBlack.Text = "Black";
+            radioBlack.UseVisualStyleBackColor = true;
             // 
             // grpMaterial
             // 
-            grpMaterial.Controls.Add(chkSilver);
-            grpMaterial.Controls.Add(chkGold);
-            grpMaterial.Controls.Add(chkSteel);
-            grpMaterial.Controls.Add(chkOak);
-            grpMaterial.Controls.Add(chkPine);
+            grpMaterial.Controls.Add(radioMatGold);
+            grpMaterial.Controls.Add(radioMatSilver);
+            grpMaterial.Controls.Add(radioMatSteel);
+            grpMaterial.Controls.Add(radioMatOak);
+            grpMaterial.Controls.Add(radioMatPine);
             grpMaterial.Font = new Font("Segoe UI", 11F);
             grpMaterial.Location = new Point(179, 260);
             grpMaterial.Name = "grpMaterial";
@@ -225,131 +229,131 @@
             grpMaterial.Text = "MATERIAL";
             grpMaterial.Visible = false;
             // 
-            // chkSilver
+            // radioMatGold
             // 
-            chkSilver.AutoSize = true;
-            chkSilver.ForeColor = Color.Blue;
-            chkSilver.Location = new Point(6, 103);
-            chkSilver.Name = "chkSilver";
-            chkSilver.Size = new Size(90, 29);
-            chkSilver.TabIndex = 4;
-            chkSilver.Text = "SILVER";
-            chkSilver.UseVisualStyleBackColor = true;
+            radioMatGold.AutoSize = true;
+            radioMatGold.ForeColor = System.Drawing.Color.Gold;
+            radioMatGold.Location = new Point(6, 141);
+            radioMatGold.Name = "radioMatGold";
+            radioMatGold.Size = new Size(82, 29);
+            radioMatGold.TabIndex = 11;
+            radioMatGold.Text = "GOLD";
+            radioMatGold.UseVisualStyleBackColor = true;
             // 
-            // chkGold
+            // radioMatSilver
             // 
-            chkGold.AutoSize = true;
-            chkGold.ForeColor = Color.Gold;
-            chkGold.Location = new Point(6, 129);
-            chkGold.Name = "chkGold";
-            chkGold.Size = new Size(83, 29);
-            chkGold.TabIndex = 3;
-            chkGold.Text = "GOLD";
-            chkGold.UseVisualStyleBackColor = true;
+            radioMatSilver.AutoSize = true;
+            radioMatSilver.ForeColor = System.Drawing.Color.CornflowerBlue;
+            radioMatSilver.Location = new Point(6, 103);
+            radioMatSilver.Name = "radioMatSilver";
+            radioMatSilver.Size = new Size(79, 29);
+            radioMatSilver.TabIndex = 11;
+            radioMatSilver.Text = "SIlver";
+            radioMatSilver.UseVisualStyleBackColor = true;
             // 
-            // chkSteel
+            // radioMatSteel
             // 
-            chkSteel.AutoSize = true;
-            chkSteel.ForeColor = Color.Black;
-            chkSteel.Location = new Point(6, 80);
-            chkSteel.Name = "chkSteel";
-            chkSteel.Size = new Size(83, 29);
-            chkSteel.TabIndex = 2;
-            chkSteel.Text = "STEEL";
-            chkSteel.UseVisualStyleBackColor = true;
+            radioMatSteel.AutoSize = true;
+            radioMatSteel.Location = new Point(6, 79);
+            radioMatSteel.Name = "radioMatSteel";
+            radioMatSteel.Size = new Size(82, 29);
+            radioMatSteel.TabIndex = 11;
+            radioMatSteel.Text = "STEEL";
+            radioMatSteel.UseVisualStyleBackColor = true;
             // 
-            // chkOak
+            // radioMatOak
             // 
-            chkOak.AutoSize = true;
-            chkOak.ForeColor = Color.Brown;
-            chkOak.Location = new Point(6, 50);
-            chkOak.Name = "chkOak";
-            chkOak.Size = new Size(71, 29);
-            chkOak.TabIndex = 1;
-            chkOak.Text = "OAK";
-            chkOak.UseVisualStyleBackColor = true;
+            radioMatOak.AutoSize = true;
+            radioMatOak.Location = new Point(6, 49);
+            radioMatOak.Name = "radioMatOak";
+            radioMatOak.Size = new Size(70, 29);
+            radioMatOak.TabIndex = 11;
+            radioMatOak.Text = "OAK";
+            radioMatOak.UseVisualStyleBackColor = true;
             // 
-            // chkPine
+            // radioMatPine
             // 
-            chkPine.AutoSize = true;
-            chkPine.ForeColor = SystemColors.ControlDarkDark;
-            chkPine.Location = new Point(6, 20);
-            chkPine.Name = "chkPine";
-            chkPine.Size = new Size(74, 29);
-            chkPine.TabIndex = 0;
-            chkPine.Text = "PINE";
-            chkPine.UseVisualStyleBackColor = true;
+            radioMatPine.AutoSize = true;
+            radioMatPine.Checked = true;
+            radioMatPine.ForeColor = System.Drawing.Color.Blue;
+            radioMatPine.Location = new Point(6, 23);
+            radioMatPine.Name = "radioMatPine";
+            radioMatPine.Size = new Size(73, 29);
+            radioMatPine.TabIndex = 11;
+            radioMatPine.TabStop = true;
+            radioMatPine.Text = "PINE";
+            radioMatPine.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // grpStyle
             // 
-            groupBox2.Controls.Add(chkVintage);
-            groupBox2.Controls.Add(chkElectric);
-            groupBox2.Controls.Add(chkAntique);
-            groupBox2.Controls.Add(chkModern);
-            groupBox2.Controls.Add(chkSimple);
-            groupBox2.Font = new Font("Segoe UI", 11F);
-            groupBox2.Location = new Point(332, 260);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(133, 193);
-            groupBox2.TabIndex = 7;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "STYLE";
-            groupBox2.Visible = false;
+            grpStyle.Controls.Add(radioStyELectic);
+            grpStyle.Controls.Add(radioStyVintage);
+            grpStyle.Controls.Add(radioStyAntique);
+            grpStyle.Controls.Add(radioStyMod);
+            grpStyle.Controls.Add(radioStySimple);
+            grpStyle.Font = new Font("Segoe UI", 11F);
+            grpStyle.Location = new Point(332, 260);
+            grpStyle.Name = "grpStyle";
+            grpStyle.Size = new Size(133, 193);
+            grpStyle.TabIndex = 7;
+            grpStyle.TabStop = false;
+            grpStyle.Text = "STYLE";
+            grpStyle.Visible = false;
             // 
-            // chkVintage
+            // radioStyELectic
             // 
-            chkVintage.AutoSize = true;
-            chkVintage.ForeColor = Color.Blue;
-            chkVintage.Location = new Point(6, 103);
-            chkVintage.Name = "chkVintage";
-            chkVintage.Size = new Size(109, 29);
-            chkVintage.TabIndex = 4;
-            chkVintage.Text = "VINTAGE";
-            chkVintage.UseVisualStyleBackColor = true;
+            radioStyELectic.AutoSize = true;
+            radioStyELectic.ForeColor = System.Drawing.Color.Green;
+            radioStyELectic.Location = new Point(6, 137);
+            radioStyELectic.Name = "radioStyELectic";
+            radioStyELectic.Size = new Size(112, 29);
+            radioStyELectic.TabIndex = 14;
+            radioStyELectic.Text = "ELECTRIC";
+            radioStyELectic.UseVisualStyleBackColor = true;
             // 
-            // chkElectric
+            // radioStyVintage
             // 
-            chkElectric.AutoSize = true;
-            chkElectric.ForeColor = Color.DodgerBlue;
-            chkElectric.Location = new Point(6, 129);
-            chkElectric.Name = "chkElectric";
-            chkElectric.Size = new Size(113, 29);
-            chkElectric.TabIndex = 3;
-            chkElectric.Text = "ELECTRIC";
-            chkElectric.UseVisualStyleBackColor = true;
+            radioStyVintage.AutoSize = true;
+            radioStyVintage.ForeColor = SystemColors.HotTrack;
+            radioStyVintage.Location = new Point(6, 103);
+            radioStyVintage.Name = "radioStyVintage";
+            radioStyVintage.Size = new Size(108, 29);
+            radioStyVintage.TabIndex = 13;
+            radioStyVintage.Text = "VINTAGE";
+            radioStyVintage.UseVisualStyleBackColor = true;
             // 
-            // chkAntique
+            // radioStyAntique
             // 
-            chkAntique.AutoSize = true;
-            chkAntique.ForeColor = Color.Black;
-            chkAntique.Location = new Point(6, 80);
-            chkAntique.Name = "chkAntique";
-            chkAntique.Size = new Size(112, 29);
-            chkAntique.TabIndex = 2;
-            chkAntique.Text = "ANTIQUE";
-            chkAntique.UseVisualStyleBackColor = true;
+            radioStyAntique.AutoSize = true;
+            radioStyAntique.Location = new Point(6, 79);
+            radioStyAntique.Name = "radioStyAntique";
+            radioStyAntique.Size = new Size(111, 29);
+            radioStyAntique.TabIndex = 12;
+            radioStyAntique.Text = "ANTIQUE";
+            radioStyAntique.UseVisualStyleBackColor = true;
             // 
-            // chkModern
+            // radioStyMod
             // 
-            chkModern.AutoSize = true;
-            chkModern.ForeColor = Color.DarkSlateGray;
-            chkModern.Location = new Point(6, 50);
-            chkModern.Name = "chkModern";
-            chkModern.Size = new Size(113, 29);
-            chkModern.TabIndex = 1;
-            chkModern.Text = "MODERN";
-            chkModern.UseVisualStyleBackColor = true;
+            radioStyMod.AutoSize = true;
+            radioStyMod.ForeColor = SystemColors.ActiveCaption;
+            radioStyMod.Location = new Point(6, 49);
+            radioStyMod.Name = "radioStyMod";
+            radioStyMod.Size = new Size(112, 29);
+            radioStyMod.TabIndex = 11;
+            radioStyMod.Text = "MODERN";
+            radioStyMod.UseVisualStyleBackColor = true;
             // 
-            // chkSimple
+            // radioStySimple
             // 
-            chkSimple.AutoSize = true;
-            chkSimple.ForeColor = SystemColors.Highlight;
-            chkSimple.Location = new Point(6, 20);
-            chkSimple.Name = "chkSimple";
-            chkSimple.Size = new Size(96, 29);
-            chkSimple.TabIndex = 0;
-            chkSimple.Text = "SIMPLE";
-            chkSimple.UseVisualStyleBackColor = true;
+            radioStySimple.AutoSize = true;
+            radioStySimple.Checked = true;
+            radioStySimple.Location = new Point(6, 20);
+            radioStySimple.Name = "radioStySimple";
+            radioStySimple.Size = new Size(95, 29);
+            radioStySimple.TabIndex = 11;
+            radioStySimple.TabStop = true;
+            radioStySimple.Text = "SIMPLE";
+            radioStySimple.UseVisualStyleBackColor = true;
             // 
             // btnCalculate
             // 
@@ -363,7 +367,7 @@
             // 
             // lblDisplay
             // 
-            lblDisplay.Location = new Point(581, 26);
+            lblDisplay.Location = new Point(568, 26);
             lblDisplay.Name = "lblDisplay";
             lblDisplay.Size = new Size(207, 313);
             lblDisplay.TabIndex = 9;
@@ -376,9 +380,9 @@
             ClientSize = new Size(800, 450);
             Controls.Add(lblDisplay);
             Controls.Add(btnCalculate);
-            Controls.Add(groupBox2);
+            Controls.Add(grpStyle);
             Controls.Add(grpMaterial);
-            Controls.Add(groupBox1);
+            Controls.Add(grpColor);
             Controls.Add(grpBxFrame);
             Controls.Add(txtHeight);
             Controls.Add(txtWidth);
@@ -388,12 +392,12 @@
             Text = "PHOTO SHOP";
             grpBxFrame.ResumeLayout(false);
             grpBxFrame.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            grpColor.ResumeLayout(false);
+            grpColor.PerformLayout();
             grpMaterial.ResumeLayout(false);
             grpMaterial.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
+            grpStyle.ResumeLayout(false);
+            grpStyle.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -405,28 +409,28 @@
         private TextBox txtWidth;
         private TextBox txtHeight;
         private GroupBox grpBxFrame;
-        private CheckBox chkFramed;
-        private CheckBox chkMatted;
-        private CheckBox chkUnFramed;
-        private GroupBox groupBox1;
-        private CheckBox chkBlue;
-        private CheckBox chkWhite;
-        private CheckBox chkGreen;
-        private CheckBox chkRed;
-        private CheckBox chkBlack;
+        private GroupBox grpColor;
         private GroupBox grpMaterial;
-        private CheckBox chkSilver;
-        private CheckBox chkGold;
-        private CheckBox chkSteel;
-        private CheckBox chkOak;
-        private CheckBox chkPine;
-        private GroupBox groupBox2;
-        private CheckBox chkVintage;
-        private CheckBox chkElectric;
-        private CheckBox chkAntique;
-        private CheckBox chkModern;
-        private CheckBox chkSimple;
+        private GroupBox grpStyle;
         private Button btnCalculate;
         private Label lblDisplay;
+        private RadioButton radioGreen;
+        private RadioButton radioRed;
+        private RadioButton radioBlack;
+        private RadioButton radioWhite;
+        private RadioButton radioBlue;
+        private RadioButton radioMatGold;
+        private RadioButton radioMatSilver;
+        private RadioButton radioMatSteel;
+        private RadioButton radioMatOak;
+        private RadioButton radioMatPine;
+        private RadioButton radioStySimple;
+        private RadioButton radioStyELectic;
+        private RadioButton radioStyVintage;
+        private RadioButton radioStyAntique;
+        private RadioButton radioStyMod;
+        private RadioButton RADIOFRAMFRAME;
+        private RadioButton radioFrameMatt;
+        private RadioButton radioFrameUn;
     }
 }
