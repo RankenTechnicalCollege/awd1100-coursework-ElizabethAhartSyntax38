@@ -41,6 +41,7 @@ namespace lab4
             txtPin.Visible = true;
             txtAccount.Clear();
             txtPin.Clear();
+            btnLogin.Visible = true ;
         }
         string[] bankAccounts = new string[5] { "1234567", "0000000", "1111111", "2222222", "33333333" };
         string[] bankAccountsPIN = new string[5] { "1234", "0000", "1111", "2222", "3333" };

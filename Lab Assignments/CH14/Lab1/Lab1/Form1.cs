@@ -14,6 +14,8 @@ namespace Lab1
         private void btnSend_Click(object sender, EventArgs e)
         {
             rTxtDisplay.Clear();
+            
+          
             if (letters.Count == 20)
             {
                 lblErrorMessage.Visible = true;

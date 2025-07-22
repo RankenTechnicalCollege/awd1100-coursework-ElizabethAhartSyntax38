@@ -21,11 +21,10 @@ namespace Lab3
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-            
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i <75; i++)
             {
                 Random numGenerator = new Random();
-                int randomNum = numGenerator.Next(0,100);
+                int randomNum = numGenerator.Next(0,75);
 
 
                 if (randomNum == 0)
@@ -114,7 +113,7 @@ namespace Lab3
                     pcBox8.Visible = true;
                     pcBox9.Visible = false;
                     pcBox10.Visible = false;
-                    POKECARD.Sort();
+                   
                    
                     
                 }

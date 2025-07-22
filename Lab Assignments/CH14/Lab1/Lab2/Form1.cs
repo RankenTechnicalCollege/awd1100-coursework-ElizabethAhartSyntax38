@@ -47,6 +47,7 @@ namespace Lab2
             grpColor.Visible = true;
             grpStyle.Visible = false;
             grpMaterial.Visible = false;
+           
         }
 
         private void RADIOFRAMFRAME_CheckedChanged(object sender, EventArgs e)
@@ -54,7 +55,7 @@ namespace Lab2
             grpMaterial.Visible = true;
             grpStyle.Visible = true;
             grpColor.Visible = false;
-
+           
         }
 
         private void radioFrameUn_CheckedChanged(object sender, EventArgs e)
@@ -62,6 +63,7 @@ namespace Lab2
             grpMaterial.Visible= false;
             grpColor.Visible= false;
             grpStyle.Visible= false;
+           
         }
     }
 }
