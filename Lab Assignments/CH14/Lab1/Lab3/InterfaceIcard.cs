@@ -11,15 +11,18 @@ namespace Lab3
     {
         private string _name;
         private Image _image;
-        
+        public double _value;
+
         public InterfaceIcard ShowPicture(string Name, Image Image)
         {
+        _value=Value;
             _name = Name;
             _image = Image;
             return this;
         }
         public string Name {  get { return _name; } }
         public Image Image { get { return _image; } }
-        public double Value { get; }
+        public double Value { get{ return _value; } }
     }
+ 
 }

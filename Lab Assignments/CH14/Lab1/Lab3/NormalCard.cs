@@ -17,10 +17,14 @@ namespace Lab3
             _image = Image;
             _value = Value;
         }
+     
         public NormalCard ShowCard(string Name,double Value,Image Image)
         {
             return new NormalCard(Name,Image,Value);
         }
+
+     
+
         public string Name { get { return _name; } }
         public double Value { get { return _value; } }
         public Image Image { get { return _image; } }

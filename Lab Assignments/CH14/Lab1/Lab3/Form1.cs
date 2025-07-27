@@ -14,6 +14,7 @@ namespace Lab3
 
         }
         List<NormalCard> POKECARD = new List<NormalCard>(10);
+       NormalCard[] PokeCardValue = new NormalCard[10];
         private void pcBox8_Click(object sender, EventArgs e)
         {
 
@@ -32,6 +33,7 @@ namespace Lab3
                     pcBox1.Visible = true;
                     lblCharmander1.Visible = true;
                     POKECARD.Add(new NormalCard(lblCharmander1.Text, pcBox1.Image, 1));
+                    
                     break;
 
                 }
