@@ -1,3 +1,5 @@
+using static System.Net.Mime.MediaTypeNames;
+
 namespace EX2
 {
     public partial class Form1 : Form
@@ -12,6 +14,7 @@ namespace EX2
             try
             {
                 decimal MonthlyInvestment = Convert.ToDecimal(txtExemption.Text);
+             
 
             }
             catch (FormatException)
@@ -27,6 +30,8 @@ namespace EX2
             try
             {
                 decimal monthlyInvestment = Convert.ToDecimal(txtExemption2.Text);
+                decimal Interst = 15m;
+                decimal animalPrint=monthlyInvestment*Interst;
             }
             catch (ArithmeticException)
             {
@@ -36,6 +41,7 @@ namespace EX2
             {
                 MessageBox.Show("ArithmeticException has occurred");
             }
+
         }
 
         private void btnExemption3_Click(object sender, EventArgs e)
@@ -43,7 +49,7 @@ namespace EX2
             txtExemption2.Clear();
             try
             {
-                decimal monthlyInvestment = Convert.ToDecimal(txtExemption2.Text);
+                int monthlyInvestment = Convert.ToInt32(txtExemption2.Text);
             }
             catch (InvalidCastException)
             {
@@ -61,7 +67,7 @@ namespace EX2
             txtExemption3.Clear();
             try
             {
-                decimal monthlyInvestment = Convert.ToDecimal(txtExemption2.Text);
+                int monthlyInvestment = Convert.ToInt32(txtExemption2.Text);
             }
             catch (NullReferenceException)
             {

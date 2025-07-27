@@ -23,6 +23,14 @@ namespace EX1
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
+            try
+            {
+               decimal TestScores1 = Convert.ToDecimal(txtTestScore.Text);
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("valid test 1-100");
+            }
             int NumOfTestScores=0;
             float AverageTestScore = 0;
             float HighestTestScores = int.MinValue;
