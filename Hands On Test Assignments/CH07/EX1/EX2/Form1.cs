@@ -19,7 +19,7 @@ namespace EX2
             }
             catch (FormatException)
             {
-                MessageBox.Show(" A Format exemption has occurred. Please check all Entries.");
+                MessageBox.Show(" A Format exemption has occurred. Please check all Entries. now");
             }
 
         }
@@ -30,12 +30,12 @@ namespace EX2
             try
             {
                 decimal monthlyInvestment = Convert.ToDecimal(txtExemption2.Text);
-                decimal Interst = 15m;
+                decimal Interst = 15m*10;
                 decimal animalPrint=monthlyInvestment*Interst;
             }
             catch (ArithmeticException)
             {
-                MessageBox.Show("ArithmeticException has occurred");
+                MessageBox.Show("ArithmeticException has occurred now");
             }
             finally
             {
@@ -50,10 +50,12 @@ namespace EX2
             try
             {
                 int monthlyInvestment = Convert.ToInt32(txtExemption2.Text);
+                lblExemption3.Text=monthlyInvestment.ToString();
+                
             }
             catch (InvalidCastException)
             {
-                MessageBox.Show("InvalidCastException has occurred");
+                MessageBox.Show("InvalidCastException has occurred now");
             }
             finally
             {
@@ -67,11 +69,11 @@ namespace EX2
             txtExemption3.Clear();
             try
             {
-                int monthlyInvestment = Convert.ToInt32(txtExemption2.Text);
+                int monthlyInvestment = Convert.ToInt32(txtExemption2.Text = null);
             }
             catch (NullReferenceException)
             {
-                MessageBox.Show("NullReferenceException has occurred");
+                MessageBox.Show("NullReferenceException has occurred now");
             }
             finally
             {
