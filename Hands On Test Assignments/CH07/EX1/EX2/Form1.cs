@@ -30,17 +30,16 @@ namespace EX2
             try
             {
                 decimal monthlyInvestment = Convert.ToDecimal(txtExemption2.Text);
-                decimal Interst = 15m*10;
+                decimal Interst = 15m/monthlyInvestment;
                 decimal animalPrint=monthlyInvestment*Interst;
             }
             catch (ArithmeticException)
             {
                 MessageBox.Show("ArithmeticException has occurred now");
             }
-            finally
-            {
-                MessageBox.Show("ArithmeticException has occurred");
-            }
+           
+          
+           
 
         }
 
@@ -69,16 +68,16 @@ namespace EX2
             txtExemption3.Clear();
             try
             {
-                int monthlyInvestment = Convert.ToInt32(txtExemption2.Text = null);
+                string? codeInvestment=null;
+                
+               
+
             }
             catch (NullReferenceException)
             {
                 MessageBox.Show("NullReferenceException has occurred now");
             }
-            finally
-            {
-                MessageBox.Show("NullReferenceException has occurred");
-            }
+         
 
         }
     }

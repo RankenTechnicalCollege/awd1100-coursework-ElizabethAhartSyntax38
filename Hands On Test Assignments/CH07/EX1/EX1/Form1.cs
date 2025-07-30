@@ -25,9 +25,9 @@ namespace EX1
         {
             try
             {
-               decimal TestScores1 = Convert.ToDecimal(txtTestScore.Text);
+                decimal TestScores1 = Convert.ToDecimal(txtTestScore.Text);
             }
-            catch (Exception x)
+            catch (OverflowException)
             {
                 MessageBox.Show("valid test 1-100");
             }
@@ -46,13 +46,11 @@ namespace EX1
 
             for (int i = 0; i < 1; i++)
             {
-                {
+                
                     NumOfTestScores++;
 
                     if (TestScore > 0 && TestScore <= 100)
                     {
-
-                       
 
                         sum += TestScore;
 
@@ -65,22 +63,32 @@ namespace EX1
                         {
                             LowestTestScores = TestScore;
                         }
+                       
 
                         txtTestScore.Clear();
                         lblDisplay.Text += $"The Number of scores is {NumOfTestScores}\n" + $"the Average of Score is {sum / NumOfTestScores}\n" + $"The Sum of all Scores is {sum}\n" + $" {HighestTestScores:f} Had the highest score and {LowestTestScores:f} had the Lowest score\n";
+                        break;
                     }
-                    else if (TestScore > 100)
+                    try
                     {
-                        lblDisplay.Text += $"Validate Entry TestScore must be 1--100\n";
-                        IsWithinRange(TestScore);
-
-
-
+                        if (TestScore > 100)
+                            lblDisplay.Text += $"Validate Entry TestScore must be 1--100\n";
                     }
+
+                    catch (OverflowException)
+                    {
+
+                        MessageBox.Show($"Validate Entry TestScore must be 1--100\n");
+                    }
+
+
+
 
                 }
-            }
-        }
+
+                }
+            
+        
             
                
                 

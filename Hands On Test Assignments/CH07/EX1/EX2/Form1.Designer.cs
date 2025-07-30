@@ -40,6 +40,7 @@
             lblExemption4 = new Label();
             txtExemtion4 = new TextBox();
             btnExemption4 = new Button();
+            lblPromptEception = new Label();
             SuspendLayout();
             // 
             // txtExemption
@@ -146,11 +147,21 @@
             btnExemption4.UseVisualStyleBackColor = true;
             btnExemption4.Click += btnExemption4_Click;
             // 
+            // lblPromptEception
+            // 
+            lblPromptEception.AutoSize = true;
+            lblPromptEception.Location = new Point(92, 107);
+            lblPromptEception.Name = "lblPromptEception";
+            lblPromptEception.Size = new Size(138, 20);
+            lblPromptEception.TabIndex = 12;
+            lblPromptEception.Text = "Enter the Number 0";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblPromptEception);
             Controls.Add(btnExemption4);
             Controls.Add(txtExemtion4);
             Controls.Add(lblExemption4);
@@ -183,5 +194,6 @@
         private Label lblExemption4;
         private TextBox txtExemtion4;
         private Button btnExemption4;
+        private Label lblPromptEception;
     }
 }
