@@ -1,4 +1,5 @@
 using System.Reflection;
+using System.Security.Cryptography;
 
 namespace EX1
 {
@@ -31,7 +32,7 @@ namespace EX1
             {
                 MessageBox.Show("valid test 1-100");
             }
-            int NumOfTestScores=0;
+            int NumOfTestScores = 0;
             float AverageTestScore = 0;
             float HighestTestScores = int.MinValue;
             float LowestTestScores = int.MaxValue;
@@ -43,62 +44,61 @@ namespace EX1
             int TestScore = Convert.ToInt32(txtTestScore.Text);
             IsWithinRange(TestScore);
 
-
-            for (int i = 0; i < 1; i++)
+            do
             {
-                
+
+                NumOfTestScores = 0;
+
+
+                for (int i = 0; i < 1; i++)
+                {
+
+                }
+                if (TestScore > 0 && TestScore <= 100)
+                {
+
+                    sum += TestScore;
                     NumOfTestScores++;
+                    TestScores[] testScores = new TestScores[1];
+                    lblDisplay.Text = TestScore.ToString();
 
-                    if (TestScore > 0 && TestScore <= 100)
+
+                    if (TestScore > HighestTestScores)
                     {
-
-                        sum += TestScore;
-
-                        if (TestScore > HighestTestScores)
-                        {
-                            HighestTestScores = TestScore;
-                        }
-
-                        if (LowestTestScores > TestScore)
-                        {
-                            LowestTestScores = TestScore;
-                        }
-                       
-
-                        txtTestScore.Clear();
-                        lblDisplay.Text += $"The Number of scores is {NumOfTestScores}\n" + $"the Average of Score is {sum / NumOfTestScores}\n" + $"The Sum of all Scores is {sum}\n" + $" {HighestTestScores:f} Had the highest score and {LowestTestScores:f} had the Lowest score\n";
-                        break;
-                    }
-                    try
-                    {
-                        if (TestScore > 100)
-                            lblDisplay.Text += $"Validate Entry TestScore must be 1--100\n";
+                        HighestTestScores = TestScore;
                     }
 
-                    catch (OverflowException)
+                    if (LowestTestScores > TestScore)
                     {
-
-                        MessageBox.Show($"Validate Entry TestScore must be 1--100\n");
+                        LowestTestScores = TestScore;
                     }
 
 
-
-
+                    txtTestScore.Clear();
+                    lblDisplay.Text += $"The Number of scores is {NumOfTestScores}\n" + $"the Average of Score is {sum / NumOfTestScores}\n" + $"The Sum of all Scores is {sum}\n" + $" {HighestTestScores:f} Had the highest score and {LowestTestScores:f} had the Lowest score\n";
+                    break;
+                }
+                try
+                {
+                    if (TestScore > 100)
+                        lblDisplay.Text += $"Validate Entry TestScore must be 1--100\n";
                 }
 
-                }
-            
-        
-            
-               
-                
+                catch (OverflowException)
+                {
 
-                
-                   
-                                                                                            
-             public string IsWithinRange(int TestScore)
+                    MessageBox.Show($"Validate Entry TestScore must be 1--100\n");
+                }
+            }
+            while (true);
+
+            NumOfTestScores++;
+
+
+        }
+        public string IsWithinRange(int TestScore)
         {
-            
+
             TestScore = Convert.ToInt32(txtTestScore.Text);
             string msg = "";
             if (TestScore > 100)
@@ -111,11 +111,21 @@ namespace EX1
 
 
 
-
-
-
-
     }
+}
+
+       
+    
+
+
+
+
+
+
+
+
+
+    
         
-    }
+    
 

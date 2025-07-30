@@ -25,7 +25,7 @@ namespace Lab3
             for (int i = 0; i <75; i++)
             {
                 Random numGenerator = new Random();
-                int randomNum = numGenerator.Next(0,75);
+                int randomNum = numGenerator.Next(0,20);
 
 
                 if (randomNum == 0)

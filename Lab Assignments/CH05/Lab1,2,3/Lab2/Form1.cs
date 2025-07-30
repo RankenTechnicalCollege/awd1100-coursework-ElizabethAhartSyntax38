@@ -37,6 +37,7 @@ namespace Lab2
                 TxtCategory.Text = "Not a Hurricane!!";
 
             }
+           
         }
     }
 }
