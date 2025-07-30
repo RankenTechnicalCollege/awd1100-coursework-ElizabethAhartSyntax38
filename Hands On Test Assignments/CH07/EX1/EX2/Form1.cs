@@ -11,6 +11,8 @@ namespace EX2
 
         private void btnExemption_Click(object sender, EventArgs e)
         {
+            Investments[] invest =new Investments[1];
+            lblPrompt.Text = Convert.ToString(new Investments[1]); 
             try
             {
                 decimal MonthlyInvestment = Convert.ToDecimal(txtExemption.Text);
@@ -27,6 +29,8 @@ namespace EX2
         private void btnExemption2_Click(object sender, EventArgs e)
         {
             txtExemption.Clear();
+            Investments[] invest = new Investments[1];
+            lblExemption3.Text = Convert.ToString(new Investments[1]);
             try
             {
                 decimal monthlyInvestment = Convert.ToDecimal(txtExemption2.Text);
@@ -46,10 +50,13 @@ namespace EX2
         private void btnExemption3_Click(object sender, EventArgs e)
         {
             txtExemption2.Clear();
+            Investments[] invest = new Investments[1];
+            lblExemption3.Text = Convert.ToString(new Investments[1]);
             try
             {
                 int monthlyInvestment = Convert.ToInt32(txtExemption2.Text);
-                lblExemption3.Text=monthlyInvestment.ToString();
+                
+               
                 
             }
             catch (InvalidCastException)
@@ -66,9 +73,14 @@ namespace EX2
         private void btnExemption4_Click(object sender, EventArgs e)
         {
             txtExemption3.Clear();
+            Investments[] invest = new Investments[1];
+            lblExemption4.Text = Convert.ToString(new Investments[1]);
             try
             {
+               
                 string? codeInvestment=null;
+                 string monthlyInvestment =Convert.ToString( txtExemtion4.Text);
+                string UserInput = monthlyInvestment + codeInvestment;
                 
                
 
@@ -77,7 +89,11 @@ namespace EX2
             {
                 MessageBox.Show("NullReferenceException has occurred now");
             }
-         
+            finally
+            {
+                MessageBox.Show("InvalidCastException has occurred");
+            }
+
 
         }
     }
