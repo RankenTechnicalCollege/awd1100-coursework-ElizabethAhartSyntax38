@@ -1,5 +1,6 @@
 using System.Reflection;
 using System.Security.Cryptography;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace EX1
 {
@@ -20,13 +21,16 @@ namespace EX1
         {
             return score;
         }
-
+        
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
+           
             try
             {
-                decimal TestScores1 = Convert.ToDecimal(txtTestScore.Text);
+                int TestScore1 = Convert.ToInt32(txtTestScore.Text);
+                if (TestScore1 >= 101)
+                { }
             }
             catch (OverflowException)
             {
@@ -42,7 +46,6 @@ namespace EX1
             TestScores[] TestScores = new TestScores[100];
             new TestStatistics(NumOfTestScores, sum, HighestTestScores, LowestTestScores, AverageTestScore);
             int TestScore = Convert.ToInt32(txtTestScore.Text);
-            IsWithinRange(TestScore);
 
             do
             {
@@ -50,7 +53,7 @@ namespace EX1
                 NumOfTestScores = 0;
 
 
-                for (int i = 0; i < 1; i++)
+                for (int i = 0; i < 10; i++)
                 {
 
                 }
@@ -58,7 +61,7 @@ namespace EX1
                 {
 
                     sum += TestScore;
-                    NumOfTestScores++;
+                   
                     TestScores[] testScores = new TestScores[1];
                     lblDisplay.Text = TestScore.ToString();
 
@@ -72,10 +75,13 @@ namespace EX1
                     {
                         LowestTestScores = TestScore;
                     }
+                    TestStatistics testscore=new TestStatistics(NumOfTestScores, sum, LowestTestScores,HighestTestScores, AverageTestScore);
+                    NumOfTestScores++;
 
 
                     txtTestScore.Clear();
                     lblDisplay.Text += $"The Number of scores is {NumOfTestScores}\n" + $"the Average of Score is {sum / NumOfTestScores}\n" + $"The Sum of all Scores is {sum}\n" + $" {HighestTestScores:f} Had the highest score and {LowestTestScores:f} had the Lowest score\n";
+                    lblDisplay.Text += $"{testscore}";
                     break;
                 }
                 try
@@ -92,7 +98,7 @@ namespace EX1
             }
             while (true);
 
-            NumOfTestScores++;
+            
 
 
         }
