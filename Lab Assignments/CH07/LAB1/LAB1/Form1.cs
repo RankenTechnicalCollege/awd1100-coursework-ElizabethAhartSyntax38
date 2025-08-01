@@ -14,10 +14,10 @@ namespace LAB1
            
             if (height > 129 || Weight > 129)
             {
-                BMI myWeight = new BMI();
-                lblDisplay.Text = $"{WeightCategory.OverWeight}";
+                BMI myWeight = new BMI(w1)
+                lblDisplay.Text = $"{WeightCategory.Normal}";
             }
-            else if (height < 130 || Weight < 130)
+            else if (height > 130 || Weight > 130)
             {
                 lblDisplay.Text =$"{WeightCategory.Normal}";
             }

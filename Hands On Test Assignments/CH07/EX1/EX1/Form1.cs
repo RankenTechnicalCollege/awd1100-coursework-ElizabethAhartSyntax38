@@ -50,7 +50,7 @@ namespace EX1
             do
             {
 
-                NumOfTestScores = 0;
+               
 
 
                 for (int i = 0; i < 10; i++)
@@ -63,11 +63,12 @@ namespace EX1
                     sum += TestScore;
                    
                     TestScores[] testScores = new TestScores[1];
-                    lblDisplay.Text = TestScore.ToString();
+                    lblDisplay.Text += TestScore.ToString();
 
 
                     if (TestScore > HighestTestScores)
                     {
+                        NumOfTestScores++;
                         HighestTestScores = TestScore;
                     }
 
@@ -76,7 +77,7 @@ namespace EX1
                         LowestTestScores = TestScore;
                     }
                     TestStatistics testscore=new TestStatistics(NumOfTestScores, sum, LowestTestScores,HighestTestScores, AverageTestScore);
-                    NumOfTestScores++;
+                   
 
 
                     txtTestScore.Clear();
