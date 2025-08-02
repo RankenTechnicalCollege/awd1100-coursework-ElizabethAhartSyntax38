@@ -98,6 +98,7 @@ namespace Lab3
                     pcBox7.Visible = false;
                     lblEspeon7.Visible = true;
                     POKECARD.Add(new NormalCard(lblCharmander1.Text, pcBox7.Image, 10));
+                
                     lblDisplay.Text += $"{POKECARD}";
 
 
