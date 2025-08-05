@@ -49,8 +49,8 @@
             lblEspeon7 = new Label();
             lblGyrados8 = new Label();
             lblPichachu9 = new Label();
-            lblESpeon10 = new Label();
             lblDisplay = new Label();
+            lblEspeonD = new Label();
             ((System.ComponentModel.ISupportInitialize)pcBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcBox2).BeginInit();
@@ -81,9 +81,9 @@
             pcBox1.ErrorImage = (Image)resources.GetObject("pcBox1.ErrorImage");
             pcBox1.Image = (Image)resources.GetObject("pcBox1.Image");
             pcBox1.InitialImage = (Image)resources.GetObject("pcBox1.InitialImage");
-            pcBox1.Location = new Point(2, 3);
+            pcBox1.Location = new Point(12, 3);
             pcBox1.Name = "pcBox1";
-            pcBox1.Size = new Size(145, 168);
+            pcBox1.Size = new Size(135, 145);
             pcBox1.TabIndex = 2;
             pcBox1.TabStop = false;
             pcBox1.Visible = false;
@@ -95,9 +95,9 @@
             pcBox5.ErrorImage = (Image)resources.GetObject("pcBox5.ErrorImage");
             pcBox5.Image = (Image)resources.GetObject("pcBox5.Image");
             pcBox5.InitialImage = (Image)resources.GetObject("pcBox5.InitialImage");
-            pcBox5.Location = new Point(585, 3);
+            pcBox5.Location = new Point(595, 3);
             pcBox5.Name = "pcBox5";
-            pcBox5.Size = new Size(158, 168);
+            pcBox5.Size = new Size(148, 152);
             pcBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pcBox5.TabIndex = 3;
             pcBox5.TabStop = false;
@@ -112,7 +112,7 @@
             pcBox2.InitialImage = (Image)resources.GetObject("pcBox2.InitialImage");
             pcBox2.Location = new Point(153, 3);
             pcBox2.Name = "pcBox2";
-            pcBox2.Size = new Size(144, 168);
+            pcBox2.Size = new Size(144, 152);
             pcBox2.TabIndex = 4;
             pcBox2.TabStop = false;
             pcBox2.Visible = false;
@@ -126,7 +126,7 @@
             pcBox4.InitialImage = (Image)resources.GetObject("pcBox4.InitialImage");
             pcBox4.Location = new Point(442, 3);
             pcBox4.Name = "pcBox4";
-            pcBox4.Size = new Size(137, 186);
+            pcBox4.Size = new Size(137, 168);
             pcBox4.SizeMode = PictureBoxSizeMode.CenterImage;
             pcBox4.TabIndex = 5;
             pcBox4.TabStop = false;
@@ -141,11 +141,12 @@
             pcBox3.InitialImage = (Image)resources.GetObject("pcBox3.InitialImage");
             pcBox3.Location = new Point(303, 3);
             pcBox3.Name = "pcBox3";
-            pcBox3.Size = new Size(133, 168);
+            pcBox3.Size = new Size(133, 152);
             pcBox3.SizeMode = PictureBoxSizeMode.CenterImage;
             pcBox3.TabIndex = 6;
             pcBox3.TabStop = false;
             pcBox3.Visible = false;
+            pcBox3.Click += pcBox3_Click;
             // 
             // pcBox8
             // 
@@ -200,7 +201,7 @@
             pcBox10.ErrorImage = (Image)resources.GetObject("pcBox10.ErrorImage");
             pcBox10.Image = (Image)resources.GetObject("pcBox10.Image");
             pcBox10.InitialImage = (Image)resources.GetObject("pcBox10.InitialImage");
-            pcBox10.Location = new Point(585, 177);
+            pcBox10.Location = new Point(595, 177);
             pcBox10.Name = "pcBox10";
             pcBox10.Size = new Size(148, 148);
             pcBox10.SizeMode = PictureBoxSizeMode.Zoom;
@@ -226,8 +227,9 @@
             // lblCharmander1
             // 
             lblCharmander1.AutoSize = true;
-            lblCharmander1.ForeColor = Color.Black;
-            lblCharmander1.Location = new Point(12, 135);
+            lblCharmander1.BackColor = SystemColors.ButtonShadow;
+            lblCharmander1.ForeColor = Color.DodgerBlue;
+            lblCharmander1.Location = new Point(12, 151);
             lblCharmander1.Name = "lblCharmander1";
             lblCharmander1.Size = new Size(110, 20);
             lblCharmander1.TabIndex = 12;
@@ -237,8 +239,9 @@
             // lblFloragato2
             // 
             lblFloragato2.AutoSize = true;
-            lblFloragato2.ForeColor = Color.Green;
-            lblFloragato2.Location = new Point(153, 151);
+            lblFloragato2.BackColor = SystemColors.ButtonShadow;
+            lblFloragato2.ForeColor = Color.DodgerBlue;
+            lblFloragato2.Location = new Point(153, 158);
             lblFloragato2.Name = "lblFloragato2";
             lblFloragato2.Size = new Size(89, 20);
             lblFloragato2.TabIndex = 13;
@@ -248,8 +251,9 @@
             // lblJolten3
             // 
             lblJolten3.AutoSize = true;
+            lblJolten3.BackColor = SystemColors.ButtonShadow;
             lblJolten3.ForeColor = Color.Black;
-            lblJolten3.Location = new Point(303, 151);
+            lblJolten3.Location = new Point(303, 154);
             lblJolten3.Name = "lblJolten3";
             lblJolten3.Size = new Size(58, 20);
             lblJolten3.TabIndex = 14;
@@ -259,8 +263,9 @@
             // lblIron4
             // 
             lblIron4.AutoSize = true;
+            lblIron4.BackColor = SystemColors.ButtonShadow;
             lblIron4.ForeColor = Color.Green;
-            lblIron4.Location = new Point(442, 135);
+            lblIron4.Location = new Point(442, 172);
             lblIron4.Name = "lblIron4";
             lblIron4.Size = new Size(88, 20);
             lblIron4.TabIndex = 15;
@@ -270,8 +275,9 @@
             // lblCharzard5
             // 
             lblCharzard5.AutoSize = true;
+            lblCharzard5.BackColor = SystemColors.ButtonShadow;
             lblCharzard5.ForeColor = Color.Black;
-            lblCharzard5.Location = new Point(585, 135);
+            lblCharzard5.Location = new Point(608, 154);
             lblCharzard5.Name = "lblCharzard5";
             lblCharzard5.Size = new Size(76, 20);
             lblCharzard5.TabIndex = 16;
@@ -282,7 +288,7 @@
             // 
             lblEEVEE6.AutoSize = true;
             lblEEVEE6.ForeColor = Color.Gold;
-            lblEEVEE6.Location = new Point(12, 305);
+            lblEEVEE6.Location = new Point(12, 328);
             lblEEVEE6.Name = "lblEEVEE6";
             lblEEVEE6.Size = new Size(50, 20);
             lblEEVEE6.TabIndex = 17;
@@ -293,7 +299,7 @@
             // 
             lblEspeon7.AutoSize = true;
             lblEspeon7.ForeColor = Color.Black;
-            lblEspeon7.Location = new Point(234, 210);
+            lblEspeon7.Location = new Point(219, 316);
             lblEspeon7.Name = "lblEspeon7";
             lblEspeon7.Size = new Size(63, 20);
             lblEspeon7.TabIndex = 18;
@@ -303,8 +309,9 @@
             // lblGyrados8
             // 
             lblGyrados8.AutoSize = true;
+            lblGyrados8.BackColor = SystemColors.ButtonShadow;
             lblGyrados8.ForeColor = Color.Green;
-            lblGyrados8.Location = new Point(303, 281);
+            lblGyrados8.Location = new Point(303, 316);
             lblGyrados8.Name = "lblGyrados8";
             lblGyrados8.Size = new Size(85, 20);
             lblGyrados8.TabIndex = 19;
@@ -314,43 +321,45 @@
             // lblPichachu9
             // 
             lblPichachu9.AutoSize = true;
+            lblPichachu9.BackColor = SystemColors.ButtonShadow;
             lblPichachu9.ForeColor = Color.Black;
-            lblPichachu9.Location = new Point(449, 305);
+            lblPichachu9.Location = new Point(442, 328);
             lblPichachu9.Name = "lblPichachu9";
             lblPichachu9.Size = new Size(81, 20);
             lblPichachu9.TabIndex = 20;
             lblPichachu9.Text = "PICHACHU";
             lblPichachu9.Visible = false;
             // 
-            // lblESpeon10
-            // 
-            lblESpeon10.AutoSize = true;
-            lblESpeon10.ForeColor = Color.Black;
-            lblESpeon10.Location = new Point(585, 305);
-            lblESpeon10.Name = "lblESpeon10";
-            lblESpeon10.Size = new Size(63, 20);
-            lblESpeon10.TabIndex = 21;
-            lblESpeon10.Text = "ESPEON";
-            lblESpeon10.Visible = false;
-            // 
             // lblDisplay
             // 
             lblDisplay.Font = new Font("Segoe UI", 9F);
             lblDisplay.ForeColor = Color.Teal;
-            lblDisplay.Location = new Point(112, 348);
+            lblDisplay.Location = new Point(7, 348);
             lblDisplay.Name = "lblDisplay";
-            lblDisplay.Size = new Size(563, 99);
+            lblDisplay.Size = new Size(668, 99);
             lblDisplay.TabIndex = 22;
             lblDisplay.Text = "_";
             lblDisplay.Click += label1_Click;
+            // 
+            // lblEspeonD
+            // 
+            lblEspeonD.AutoSize = true;
+            lblEspeonD.BackColor = SystemColors.ButtonShadow;
+            lblEspeonD.ForeColor = Color.Black;
+            lblEspeonD.Location = new Point(595, 328);
+            lblEspeonD.Name = "lblEspeonD";
+            lblEspeonD.Size = new Size(138, 20);
+            lblEspeonD.TabIndex = 23;
+            lblEspeonD.Text = "ESPEON DIAMOND";
+            lblEspeonD.Visible = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblEspeonD);
             Controls.Add(lblDisplay);
-            Controls.Add(lblESpeon10);
             Controls.Add(lblPichachu9);
             Controls.Add(lblGyrados8);
             Controls.Add(lblEspeon7);
@@ -410,7 +419,7 @@
         private Label lblEspeon7;
         private Label lblGyrados8;
         private Label lblPichachu9;
-        private Label lblESpeon10;
         private Label lblDisplay;
+        private Label lblEspeonD;
     }
 }
