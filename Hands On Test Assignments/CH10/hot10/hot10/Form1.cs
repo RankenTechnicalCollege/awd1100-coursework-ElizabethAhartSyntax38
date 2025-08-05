@@ -33,30 +33,39 @@ namespace hot10
         private void btnBuild_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < cmbBoxOcc.Items.Count; i++)
-            
-            if (chckBoxENv.Checked )
-            {
-                new  Order(cmbBoxOcc.ToString(), true, true,18);
-             
-               
-            }
-            if (chckBoxStamp.Checked||chckBoxENv.Checked) 
-            {
-                new Order(cmbBoxStyle.ToString(), true, true,18);
-                Order myOrder = new Order(cmbBoxStyle.ToString(), true, true,17);
-                lblDisplayTotal.Text += $"{myOrder.base_price}";
-               
-            }
-            if (chckBoxMess.Checked )
-            {
-                rchDisplay.Visible = true;
-                
-       
-            }
+
+                if (chckBoxENv.Checked || chckBoxMess.Checked)
+                {
+
+                    Order myOrder = new Order(cmbBoxStyle.ToString(), true, false, 17);
+                    rchDisplay.Visible = true;
+                    lblDisplayFlowers.Visible = true;
+                    lblDisplayHearts.Visible = true;
+                    lblDisplayFlowers.Text = rchDisplay.Text;
+                    lblDisplayHearts.Text = rchDisplay.Text;
+                    lblDisplayTotal.Text = $"{myOrder.base_price+4}";
+
+
+
+                }
+                else if (chckBoxStamp.Checked || chckBoxENv.Checked)
+                {
+
+                    Order myOrder = new Order(cmbBoxStyle.ToString(), false, true, 17);
+                    lblDisplayTotal.Text = $"{myOrder.base_price+2}";
+
+                }
+                else
+                {
+                    Order myOrder = new Order(cmbBoxStyle.ToString(), true, true, 17);
+                   
+                    lblDisplayTotal.Text += $"{myOrder.base_price}";
+
+
+                }
             
 
-            pcBoxFlower.Visible = true;
-            pcBoxHearts.Visible = true;
+           
 
         }
     }

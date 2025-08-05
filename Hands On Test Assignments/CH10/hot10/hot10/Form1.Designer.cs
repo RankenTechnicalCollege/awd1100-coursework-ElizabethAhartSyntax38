@@ -52,7 +52,7 @@
             pcBoxFlower.Image = (Image)resources.GetObject("pcBoxFlower.Image");
             pcBoxFlower.Location = new Point(430, 2);
             pcBoxFlower.Name = "pcBoxFlower";
-            pcBoxFlower.Size = new Size(368, 203);
+            pcBoxFlower.Size = new Size(368, 178);
             pcBoxFlower.SizeMode = PictureBoxSizeMode.Zoom;
             pcBoxFlower.TabIndex = 0;
             pcBoxFlower.TabStop = false;
@@ -61,9 +61,9 @@
             // pcBoxHearts
             // 
             pcBoxHearts.Image = (Image)resources.GetObject("pcBoxHearts.Image");
-            pcBoxHearts.Location = new Point(430, 211);
+            pcBoxHearts.Location = new Point(445, 222);
             pcBoxHearts.Name = "pcBoxHearts";
-            pcBoxHearts.Size = new Size(368, 243);
+            pcBoxHearts.Size = new Size(331, 161);
             pcBoxHearts.SizeMode = PictureBoxSizeMode.StretchImage;
             pcBoxHearts.TabIndex = 1;
             pcBoxHearts.TabStop = false;
@@ -72,9 +72,9 @@
             // lblDisplayHearts
             // 
             lblDisplayHearts.Font = new Font("Segoe UI", 7.5F);
-            lblDisplayHearts.Location = new Point(485, 392);
+            lblDisplayHearts.Location = new Point(445, 394);
             lblDisplayHearts.Name = "lblDisplayHearts";
-            lblDisplayHearts.Size = new Size(313, 62);
+            lblDisplayHearts.Size = new Size(313, 46);
             lblDisplayHearts.TabIndex = 2;
             lblDisplayHearts.Text = "_";
             lblDisplayHearts.Visible = false;
@@ -82,9 +82,9 @@
             // lblDisplayFlowers
             // 
             lblDisplayFlowers.Font = new Font("Segoe UI", 6.5F);
-            lblDisplayFlowers.Location = new Point(534, 138);
+            lblDisplayFlowers.Location = new Point(455, 183);
             lblDisplayFlowers.Name = "lblDisplayFlowers";
-            lblDisplayFlowers.Size = new Size(264, 67);
+            lblDisplayFlowers.Size = new Size(303, 36);
             lblDisplayFlowers.TabIndex = 3;
             lblDisplayFlowers.Text = "_";
             lblDisplayFlowers.Visible = false;

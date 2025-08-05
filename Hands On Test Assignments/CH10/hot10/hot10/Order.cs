@@ -21,34 +21,36 @@ namespace hot10
         public string Name => _name;
         public string DescriptionMess => _descriptionMess;
         public Occasions CardOrder => _cardOrder;
-        public double base_price { get { return base_price; } }
+        public double base_price {  get; set; }
         public Style  stamp { get; set; }
 
 
 
-        public Order(string name, bool style,bool cardOrder,double price)
+        public Order(string name, bool style, bool cardOrder, double price)
         {
-           
+            base_price = price;
             _name = name;
-            if (style)
+            style = true;
+            cardOrder = true;
+            if (cardOrder == true)
             {
-                _envelope = new Style(name, base_price, Image.FromFile(name));
-               
+               base_price = base_price + .50;
             }
-            if(cardOrder)
+            else if (style = true)
             {
-                _cardOrder = new Occasions(name);
-               
+               base_price= base_price + 2.5;
             }
+            else
+            {
+              base_price=base_price;
+            }
+        
            
           
                 
             
         }
 
-        public void AddOrder(Order MyOrder)
-        {
-
-        }
+        
     }
 }
