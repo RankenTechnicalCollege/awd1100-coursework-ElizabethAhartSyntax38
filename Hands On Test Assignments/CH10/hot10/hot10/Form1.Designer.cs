@@ -42,6 +42,7 @@
             chckBoxMess = new CheckBox();
             rchDisplay = new RichTextBox();
             lblDisplayTotal = new Label();
+            btnBuild = new Button();
             ((System.ComponentModel.ISupportInitialize)pcBoxFlower).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcBoxHearts).BeginInit();
             SuspendLayout();
@@ -181,11 +182,22 @@
             lblDisplayTotal.TabIndex = 12;
             lblDisplayTotal.Text = "TotalCost";
             // 
+            // btnBuild
+            // 
+            btnBuild.Location = new Point(1, 356);
+            btnBuild.Name = "btnBuild";
+            btnBuild.Size = new Size(116, 84);
+            btnBuild.TabIndex = 13;
+            btnBuild.Text = "Build";
+            btnBuild.UseVisualStyleBackColor = true;
+            btnBuild.Click += btnBuild_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnBuild);
             Controls.Add(lblDisplayTotal);
             Controls.Add(rchDisplay);
             Controls.Add(chckBoxMess);
@@ -222,5 +234,6 @@
         private CheckBox chckBoxMess;
         private RichTextBox rchDisplay;
         private Label lblDisplayTotal;
+        private Button btnBuild;
     }
 }
