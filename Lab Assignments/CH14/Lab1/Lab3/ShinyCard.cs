@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Lab3
 {
-    public class ShinyCard
+    public class ShinyCard : IComparable<NormalCard>
     {
         private string _name;
         private Image _image;
@@ -36,8 +36,13 @@ namespace Lab3
 
 
         }
-        public string Name {  get { return _name; } }
+        public string Name { get { return _name; } }
         public double Value { get { return _value; } }
         public Image image { get { return _image; } }
+
+        public int CompareTo(NormalCard? InterfaceIcard)
+        {
+            return 10;
+        }
     }
 }

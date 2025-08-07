@@ -12,16 +12,18 @@ namespace LAB1
         private float _heightInInches;
         private float _bmi;
         private WeightCategory _weightCategory;
-        
-       
 
-        private static BmiCalculator BmiCalculator(float _weightInpounds, float _heightInInches):base(float Weight,float Height,float )
+
+
+        private static BmiCalculator BMI(float _weightInpounds, float _heightInInches)
         {
-            float Height= _heightInInches;
-            float BMI= _weightInpounds + _heightInInches;
-            float Weight = _heightInInches;
-
-           
+            float Height=Convert.ToSingle( _heightInInches);
+            
+            float Weight =Convert.ToSingle( _heightInInches);
+           if(Height > 39&& Weight>165 )
+            {
+              
+          
         }
     }
 }

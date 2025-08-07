@@ -1,4 +1,5 @@
 using System.Diagnostics.Eventing.Reader;
+using System.Drawing.Design;
 using System.Security.Cryptography;
 
 namespace Lab3
@@ -9,7 +10,7 @@ namespace Lab3
         {
             InitializeComponent();
             Random numGenerator = new Random();
-            int randomNum = numGenerator.Next(0, 4);
+            int randomNum = numGenerator.Next(0, 5);
             POKECARD.Sort();
 
         }
@@ -26,10 +27,10 @@ namespace Lab3
             for (int i = 0; i < 10; i++)
             {
                 Random numGenerator = new Random();
-                int randomNum = numGenerator.Next(0, 4);
+                int randomNum = numGenerator.Next(1, 4);
 
 
-                if (randomNum == 0)
+                if (randomNum == 1|| randomNum==2)
                 {
                     pcBox1.Visible = true;
                     lblCharmander1.Visible = true;
@@ -52,12 +53,17 @@ namespace Lab3
                     POKECARD.Add(new NormalCard(lblIron4.Text, pcBox4.Image, 4));
                     lblDisplay.Text += $"{POKECARD}";
 
+                    pcBox10.Visible = true;
+                    lblEspeonD.Visible = true;
+                    POKECARD.Add(new NormalCard(lblCharmander1.Text, pcBox10.Image, 8));
+                    lblDisplay.Text += $"{POKECARD}";
+
 
 
 
 
                 }
-                else if (randomNum == 1)
+                else if (randomNum == 3||randomNum==4)
                 {
 
                     pcBox5.Visible = true;
@@ -79,27 +85,17 @@ namespace Lab3
                     lblEspeon7.Visible = true;
                     POKECARD.Add(new NormalCard(lblCharmander1.Text, pcBox7.Image, 10));
 
+
                     lblDisplay.Text += $"{POKECARD}";
-
-
-                    break;
-                }
-                else if (randomNum == 2)
-                {
                     pcBox9.Visible = true;
                     lblPichachu9.Visible = true;
                     POKECARD.Add(new NormalCard(lblCharmander1.Text, pcBox9.Image, 9));
                     lblDisplay.Text += $"{POKECARD}";
 
-                    pcBox10.Visible = true;
-                    lblEspeonD.Visible = true;
-                    POKECARD.Add(new NormalCard(lblCharmander1.Text, pcBox10.Image, 8));
-                    lblDisplay.Text += $"{POKECARD}";
 
                     break;
                 }
-
-                else
+                else if (randomNum == 0)
                 {
                     pcBox10.Visible = true;
                     pcBox1.Visible = true;
@@ -114,8 +110,6 @@ namespace Lab3
 
 
 
-
-
                 }
 
 
@@ -126,16 +120,8 @@ namespace Lab3
 
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pcBox3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
+
+  
 

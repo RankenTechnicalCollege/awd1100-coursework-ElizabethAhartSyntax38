@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab3
 {
-    public class NormalCard : IComparable<NormalCard>
+    public class NormalCard 
     {
         private string _name;
         private Image _image;
@@ -30,11 +30,9 @@ namespace Lab3
         public Image Image { get { return _image; } }
 
 
-        public int CompareTo(NormalCard? InterfaceIcard)
-        {
-            return 10;
-            
+
+       
+
 
         }
     }
-}

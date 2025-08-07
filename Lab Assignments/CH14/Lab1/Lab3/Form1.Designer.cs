@@ -76,7 +76,7 @@
             // 
             // pcBox1
             // 
-            pcBox1.BackColor = Color.Pink;
+            pcBox1.BackColor = Color.White;
             pcBox1.BorderStyle = BorderStyle.FixedSingle;
             pcBox1.ErrorImage = (Image)resources.GetObject("pcBox1.ErrorImage");
             pcBox1.Image = (Image)resources.GetObject("pcBox1.Image");
@@ -146,7 +146,7 @@
             pcBox3.TabIndex = 6;
             pcBox3.TabStop = false;
             pcBox3.Visible = false;
-            pcBox3.Click += pcBox3_Click;
+           
             // 
             // pcBox8
             // 
@@ -227,7 +227,7 @@
             // lblCharmander1
             // 
             lblCharmander1.AutoSize = true;
-            lblCharmander1.BackColor = SystemColors.ButtonShadow;
+            lblCharmander1.BackColor = SystemColors.Window;
             lblCharmander1.ForeColor = Color.DodgerBlue;
             lblCharmander1.Location = new Point(12, 151);
             lblCharmander1.Name = "lblCharmander1";
@@ -239,7 +239,7 @@
             // lblFloragato2
             // 
             lblFloragato2.AutoSize = true;
-            lblFloragato2.BackColor = SystemColors.ButtonShadow;
+            lblFloragato2.BackColor = SystemColors.Window;
             lblFloragato2.ForeColor = Color.DodgerBlue;
             lblFloragato2.Location = new Point(153, 158);
             lblFloragato2.Name = "lblFloragato2";
@@ -251,7 +251,7 @@
             // lblJolten3
             // 
             lblJolten3.AutoSize = true;
-            lblJolten3.BackColor = SystemColors.ButtonShadow;
+            lblJolten3.BackColor = SystemColors.Window;
             lblJolten3.ForeColor = Color.Black;
             lblJolten3.Location = new Point(303, 154);
             lblJolten3.Name = "lblJolten3";
@@ -263,7 +263,7 @@
             // lblIron4
             // 
             lblIron4.AutoSize = true;
-            lblIron4.BackColor = SystemColors.ButtonShadow;
+            lblIron4.BackColor = SystemColors.Window;
             lblIron4.ForeColor = Color.Green;
             lblIron4.Location = new Point(442, 172);
             lblIron4.Name = "lblIron4";
@@ -275,7 +275,7 @@
             // lblCharzard5
             // 
             lblCharzard5.AutoSize = true;
-            lblCharzard5.BackColor = SystemColors.ButtonShadow;
+            lblCharzard5.BackColor = SystemColors.Window;
             lblCharzard5.ForeColor = Color.Black;
             lblCharzard5.Location = new Point(608, 154);
             lblCharzard5.Name = "lblCharzard5";
@@ -287,7 +287,8 @@
             // lblEEVEE6
             // 
             lblEEVEE6.AutoSize = true;
-            lblEEVEE6.ForeColor = Color.Gold;
+            lblEEVEE6.BackColor = Color.Gold;
+            lblEEVEE6.ForeColor = Color.Black;
             lblEEVEE6.Location = new Point(12, 328);
             lblEEVEE6.Name = "lblEEVEE6";
             lblEEVEE6.Size = new Size(50, 20);
@@ -309,7 +310,7 @@
             // lblGyrados8
             // 
             lblGyrados8.AutoSize = true;
-            lblGyrados8.BackColor = SystemColors.ButtonShadow;
+            lblGyrados8.BackColor = SystemColors.Window;
             lblGyrados8.ForeColor = Color.Green;
             lblGyrados8.Location = new Point(303, 316);
             lblGyrados8.Name = "lblGyrados8";
@@ -321,7 +322,7 @@
             // lblPichachu9
             // 
             lblPichachu9.AutoSize = true;
-            lblPichachu9.BackColor = SystemColors.ButtonShadow;
+            lblPichachu9.BackColor = SystemColors.Window;
             lblPichachu9.ForeColor = Color.Black;
             lblPichachu9.Location = new Point(442, 328);
             lblPichachu9.Name = "lblPichachu9";
@@ -339,12 +340,12 @@
             lblDisplay.Size = new Size(668, 99);
             lblDisplay.TabIndex = 22;
             lblDisplay.Text = "_";
-            lblDisplay.Click += label1_Click;
+           
             // 
             // lblEspeonD
             // 
             lblEspeonD.AutoSize = true;
-            lblEspeonD.BackColor = SystemColors.ButtonShadow;
+            lblEspeonD.BackColor = Color.Gold;
             lblEspeonD.ForeColor = Color.Black;
             lblEspeonD.Location = new Point(595, 328);
             lblEspeonD.Name = "lblEspeonD";

@@ -7,22 +7,24 @@ using System.Threading.Tasks;
 
 namespace Lab3
 {
-   public class BankForm:Account
+    public class BankForm : Account
     {
         private string _login;
         private string _password;
         private string _userName;
-        
-    
-    public string BankForm(string UserName, string Password):base.Account(string Login, string Password,bool disabled)
+        bool Disabled;
+        bool enabled;
+
+
+        public string BankForm(string UserName, string Password):base(Account(string Login, string Password,bool Disabled))
         {
             _userName = UserName;
             _password = Password;
-            disabled=_userName != null;
+            Disabled = UserName != null;
             if (UserName != null)
             {
-                return$""
+                return $"{_userName,_password,disabled}";
             }
 
         }
-}
+    } }
