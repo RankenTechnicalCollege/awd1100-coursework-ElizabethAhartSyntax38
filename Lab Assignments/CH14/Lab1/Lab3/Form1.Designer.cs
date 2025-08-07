@@ -83,7 +83,7 @@
             pcBox1.InitialImage = (Image)resources.GetObject("pcBox1.InitialImage");
             pcBox1.Location = new Point(12, 3);
             pcBox1.Name = "pcBox1";
-            pcBox1.Size = new Size(135, 145);
+            pcBox1.Size = new Size(124, 138);
             pcBox1.TabIndex = 2;
             pcBox1.TabStop = false;
             pcBox1.Visible = false;
@@ -97,7 +97,7 @@
             pcBox5.InitialImage = (Image)resources.GetObject("pcBox5.InitialImage");
             pcBox5.Location = new Point(595, 3);
             pcBox5.Name = "pcBox5";
-            pcBox5.Size = new Size(148, 152);
+            pcBox5.Size = new Size(137, 145);
             pcBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pcBox5.TabIndex = 3;
             pcBox5.TabStop = false;
@@ -112,7 +112,7 @@
             pcBox2.InitialImage = (Image)resources.GetObject("pcBox2.InitialImage");
             pcBox2.Location = new Point(153, 3);
             pcBox2.Name = "pcBox2";
-            pcBox2.Size = new Size(144, 152);
+            pcBox2.Size = new Size(133, 145);
             pcBox2.TabIndex = 4;
             pcBox2.TabStop = false;
             pcBox2.Visible = false;
@@ -126,7 +126,7 @@
             pcBox4.InitialImage = (Image)resources.GetObject("pcBox4.InitialImage");
             pcBox4.Location = new Point(442, 3);
             pcBox4.Name = "pcBox4";
-            pcBox4.Size = new Size(137, 168);
+            pcBox4.Size = new Size(126, 161);
             pcBox4.SizeMode = PictureBoxSizeMode.CenterImage;
             pcBox4.TabIndex = 5;
             pcBox4.TabStop = false;
@@ -141,7 +141,7 @@
             pcBox3.InitialImage = (Image)resources.GetObject("pcBox3.InitialImage");
             pcBox3.Location = new Point(303, 3);
             pcBox3.Name = "pcBox3";
-            pcBox3.Size = new Size(133, 152);
+            pcBox3.Size = new Size(122, 145);
             pcBox3.SizeMode = PictureBoxSizeMode.CenterImage;
             pcBox3.TabIndex = 6;
             pcBox3.TabStop = false;
@@ -156,7 +156,7 @@
             pcBox8.InitialImage = (Image)resources.GetObject("pcBox8.InitialImage");
             pcBox8.Location = new Point(303, 177);
             pcBox8.Name = "pcBox8";
-            pcBox8.Size = new Size(133, 136);
+            pcBox8.Size = new Size(122, 129);
             pcBox8.SizeMode = PictureBoxSizeMode.Zoom;
             pcBox8.TabIndex = 11;
             pcBox8.TabStop = false;
@@ -172,7 +172,7 @@
             pcBox9.InitialImage = (Image)resources.GetObject("pcBox9.InitialImage");
             pcBox9.Location = new Point(442, 195);
             pcBox9.Name = "pcBox9";
-            pcBox9.Size = new Size(137, 130);
+            pcBox9.Size = new Size(126, 123);
             pcBox9.SizeMode = PictureBoxSizeMode.Zoom;
             pcBox9.TabIndex = 10;
             pcBox9.TabStop = false;
@@ -187,7 +187,7 @@
             pcBox7.InitialImage = (Image)resources.GetObject("pcBox7.InitialImage");
             pcBox7.Location = new Point(153, 181);
             pcBox7.Name = "pcBox7";
-            pcBox7.Size = new Size(144, 132);
+            pcBox7.Size = new Size(133, 125);
             pcBox7.SizeMode = PictureBoxSizeMode.Zoom;
             pcBox7.TabIndex = 9;
             pcBox7.TabStop = false;
@@ -202,7 +202,7 @@
             pcBox10.InitialImage = (Image)resources.GetObject("pcBox10.InitialImage");
             pcBox10.Location = new Point(595, 177);
             pcBox10.Name = "pcBox10";
-            pcBox10.Size = new Size(148, 148);
+            pcBox10.Size = new Size(137, 141);
             pcBox10.SizeMode = PictureBoxSizeMode.Zoom;
             pcBox10.TabIndex = 8;
             pcBox10.TabStop = false;
@@ -217,7 +217,7 @@
             pcBox6.InitialImage = (Image)resources.GetObject("pcBox6.InitialImage");
             pcBox6.Location = new Point(12, 174);
             pcBox6.Name = "pcBox6";
-            pcBox6.Size = new Size(135, 151);
+            pcBox6.Size = new Size(124, 144);
             pcBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pcBox6.TabIndex = 7;
             pcBox6.TabStop = false;
@@ -288,7 +288,7 @@
             lblEEVEE6.AutoSize = true;
             lblEEVEE6.BackColor = Color.White;
             lblEEVEE6.ForeColor = Color.Black;
-            lblEEVEE6.Location = new Point(12, 328);
+            lblEEVEE6.Location = new Point(12, 316);
             lblEEVEE6.Name = "lblEEVEE6";
             lblEEVEE6.Size = new Size(50, 20);
             lblEEVEE6.TabIndex = 17;
@@ -300,7 +300,7 @@
             lblEspeon7.AutoSize = true;
             lblEspeon7.BackColor = Color.Gold;
             lblEspeon7.ForeColor = Color.Black;
-            lblEspeon7.Location = new Point(219, 316);
+            lblEspeon7.Location = new Point(153, 309);
             lblEspeon7.Name = "lblEspeon7";
             lblEspeon7.Size = new Size(63, 20);
             lblEspeon7.TabIndex = 18;
@@ -312,7 +312,7 @@
             lblGyrados8.AutoSize = true;
             lblGyrados8.BackColor = Color.Gold;
             lblGyrados8.ForeColor = Color.Green;
-            lblGyrados8.Location = new Point(303, 316);
+            lblGyrados8.Location = new Point(294, 309);
             lblGyrados8.Name = "lblGyrados8";
             lblGyrados8.Size = new Size(85, 20);
             lblGyrados8.TabIndex = 19;
@@ -324,20 +324,21 @@
             lblPichachu9.AutoSize = true;
             lblPichachu9.BackColor = SystemColors.Window;
             lblPichachu9.ForeColor = Color.Black;
-            lblPichachu9.Location = new Point(442, 328);
+            lblPichachu9.Location = new Point(442, 316);
             lblPichachu9.Name = "lblPichachu9";
             lblPichachu9.Size = new Size(81, 20);
             lblPichachu9.TabIndex = 20;
             lblPichachu9.Text = "PICHACHU";
             lblPichachu9.Visible = false;
+            lblPichachu9.Click += lblPichachu9_Click;
             // 
             // lblDisplay
             // 
-            lblDisplay.Font = new Font("Segoe UI", 9F);
+            lblDisplay.Font = new Font("Segoe UI", 7.5F);
             lblDisplay.ForeColor = Color.Teal;
-            lblDisplay.Location = new Point(7, 348);
+            lblDisplay.Location = new Point(7, 336);
             lblDisplay.Name = "lblDisplay";
-            lblDisplay.Size = new Size(668, 99);
+            lblDisplay.Size = new Size(657, 104);
             lblDisplay.TabIndex = 22;
             lblDisplay.Text = "_";
             // 
@@ -346,7 +347,7 @@
             lblEspeonD.AutoSize = true;
             lblEspeonD.BackColor = Color.White;
             lblEspeonD.ForeColor = Color.Black;
-            lblEspeonD.Location = new Point(595, 328);
+            lblEspeonD.Location = new Point(594, 316);
             lblEspeonD.Name = "lblEspeonD";
             lblEspeonD.Size = new Size(138, 20);
             lblEspeonD.TabIndex = 23;
