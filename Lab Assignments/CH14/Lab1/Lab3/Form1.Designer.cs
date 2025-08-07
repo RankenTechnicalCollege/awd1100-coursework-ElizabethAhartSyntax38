@@ -146,7 +146,6 @@
             pcBox3.TabIndex = 6;
             pcBox3.TabStop = false;
             pcBox3.Visible = false;
-           
             // 
             // pcBox8
             // 
@@ -287,7 +286,7 @@
             // lblEEVEE6
             // 
             lblEEVEE6.AutoSize = true;
-            lblEEVEE6.BackColor = Color.Gold;
+            lblEEVEE6.BackColor = Color.White;
             lblEEVEE6.ForeColor = Color.Black;
             lblEEVEE6.Location = new Point(12, 328);
             lblEEVEE6.Name = "lblEEVEE6";
@@ -299,6 +298,7 @@
             // lblEspeon7
             // 
             lblEspeon7.AutoSize = true;
+            lblEspeon7.BackColor = Color.Gold;
             lblEspeon7.ForeColor = Color.Black;
             lblEspeon7.Location = new Point(219, 316);
             lblEspeon7.Name = "lblEspeon7";
@@ -310,7 +310,7 @@
             // lblGyrados8
             // 
             lblGyrados8.AutoSize = true;
-            lblGyrados8.BackColor = SystemColors.Window;
+            lblGyrados8.BackColor = Color.Gold;
             lblGyrados8.ForeColor = Color.Green;
             lblGyrados8.Location = new Point(303, 316);
             lblGyrados8.Name = "lblGyrados8";
@@ -340,12 +340,11 @@
             lblDisplay.Size = new Size(668, 99);
             lblDisplay.TabIndex = 22;
             lblDisplay.Text = "_";
-           
             // 
             // lblEspeonD
             // 
             lblEspeonD.AutoSize = true;
-            lblEspeonD.BackColor = Color.Gold;
+            lblEspeonD.BackColor = Color.White;
             lblEspeonD.ForeColor = Color.Black;
             lblEspeonD.Location = new Point(595, 328);
             lblEspeonD.Name = "lblEspeonD";

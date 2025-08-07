@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Lab3
 {
-    public class ShinyCard : IComparable<NormalCard>
+    public class ShinyCard 
     {
         private string _name;
         private Image _image;
@@ -16,7 +16,7 @@ namespace Lab3
         private ImageEditor _font;
         private ImageEditor _backColor;
         private ImageEditor _foreColor;
-        public ShinyCard(string Name, Image Image, double Value, ImageEditor Font, ImageEditor BackColor, ImageEditor ForeColor)
+        public ShinyCard(string Name, Image Image, double Value,ImageEditor Font, ImageEditor BackColor, ImageEditor ForeColor)
         {
             _name = Name;
             _image = Image;
